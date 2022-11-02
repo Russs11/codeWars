@@ -100,22 +100,22 @@
 //             ('-', 15, 18)-- > -3
 //                 ('*', 5, 5)-- > 25
 //                     ('/', 49, 7)-- > 7
-function operations(operator, value1, value2) {
-    let res = 0
-    if (operator === '+') {
-        res = value1 + value2
-    } else if (operator === '-') {
-        res = value1 - value2
-    } else if (operator === '*') {
-        res = value1 * value2
-    } else if (operator === '/') {
-        res = value1 / value2
+function basicOp(operation, value1, value2) {
+    switch (operation) {
+        case '+':
+            return value1 + value2;
+        case '-':
+            return value1 - value2;
+        case '*':
+            return value1 * value2;
+        case '/':
+            return value1 / value2;
+        default:
+            return 0;
     }
-    return res
-
 }
 
 
-console.log(operations('*', 10, 5));
+console.log(basicOp('*', 10, 5));
 
 
