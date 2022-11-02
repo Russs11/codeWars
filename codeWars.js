@@ -100,22 +100,40 @@
 //             ('-', 15, 18)-- > -3
 //                 ('*', 5, 5)-- > 25
 //                     ('/', 49, 7)-- > 7
-function basicOp(operation, value1, value2) {
-    switch (operation) {
-        case '+':
-            return value1 + value2;
-        case '-':
-            return value1 - value2;
-        case '*':
-            return value1 * value2;
-        case '/':
-            return value1 / value2;
-        default:
-            return 0;
-    }
-}
+// function basicOp(operation, value1, value2) {
+//     switch (operation) {
+//         case '+':
+//             return value1 + value2;
+//         case '-':
+//             return value1 - value2;
+//         case '*':
+//             return value1 * value2;
+//         case '/':
+//             return value1 / value2;
+//         default:
+//             return 0;
+//     }
+// }
 
 
-console.log(basicOp('*', 10, 5));
+// console.log(basicOp('*', 10, 5));
 
+// Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid(2010) and After Earth(2013).Jaden is also known for some of his philosophy that he delivers via Twitter.When writing on Twitter, he is known for almost always capitalizing every word.For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
 
+// Your task is to convert strings to how they would be written by Jaden Smith.The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+//     Example:
+
+// Not Jaden - Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden - Cased: "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+let str = "How can mirrors be real if our eyes aren't real";
+String.prototype.toJadenCase = function () {
+    let arr = this.split(/\s/);
+    let arr2 = arr.map(function (item, index) {
+        return item.slice(0, 1).toUpperCase() + item.slice(1);
+    });
+    return arr2.join(' ');
+};
+let res = str.toJadenCase()
+console.log(res);
