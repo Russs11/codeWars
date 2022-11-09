@@ -127,13 +127,46 @@
 // Not Jaden - Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden - Cased: "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
-let str = "How can mirrors be real if our eyes aren't real";
-String.prototype.toJadenCase = function () {
-    let arr = this.split(/\s/);
-    let arr2 = arr.map(function (item, index) {
-        return item.slice(0, 1).toUpperCase() + item.slice(1);
-    });
-    return arr2.join(' ');
-};
-let res = str.toJadenCase()
-console.log(res);
+// let str = "How can mirrors be real if our eyes aren't real";
+// String.prototype.toJadenCase = function () {
+//     let arr = this.split(/\s/);
+//     let arr2 = arr.map(function (item, index) {
+//         return item.slice(0, 1).toUpperCase() + item.slice(1);
+//     });
+//     return arr2.join(' ');
+// };
+// let res = str.toJadenCase()
+// console.log(res);
+
+// Given an array of integers your solution should find the smallest integer.
+
+// For example:
+
+// Given[34, 15, 88, 2] your solution will return 2
+// Given[34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+// class SmallestIntegerFinder {
+//     findSmallestInt(args) {
+//         return Math.min.apply(null, this);
+//     }
+// }
+
+// // findSmallestInt([12,5,10,2])
+// const res = new SmallestIntegerFinder([12, 5, 10, 2])
+// console.log(res);
+
+//Given the string representations of two integers, return the string representation of the sum of those integers.
+
+// For example:
+
+// sumStrings('1', '2') // => '3'
+// A string representation of an integer will contain no characters besides the ten numerals "0" to "9".
+
+// I have removed the use of BigInteger and BigDecimal in java
+
+// Python: your solution need to work with huge numbers(about a milion digits), converting to int will not work.
+function sumStrings(a, b) {
+    const sum = BigInt(a) + BigInt(b)
+    return sum.toString()
+}
