@@ -184,17 +184,30 @@
 // " Hello there thanks for trying my Kata"  => "#HelloThereThanksForTryingMyKata"
 // "    Hello     World   "                  => "#HelloWorld"
 // ""                                        => false
-function generateHashtag(str) {
+// function generateHashtag(str) {
 
-    str = str.replace(/\b\w/g, (c) => c.toUpperCase());
-    const splitted = str.split(" ");
-    const unshifted = splitted.unshift("#");
-    const res = splitted.join("");
-    if (res === "#") {
-        return false;
-    } else if (res.length > 140) {
-        return false;
-    } else {
-        return res
-    }
+//     str = str.replace(/\b\w/g, (c) => c.toUpperCase());
+//     const splitted = str.split(" ");
+//     const unshifted = splitted.unshift("#");
+//     const res = splitted.join("");
+//     if (res === "#") {
+//         return false;
+//     } else if (res.length > 140) {
+//         return false;
+//     } else {
+//         return res
+//     }
+// }
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed(Just like the name of this Kata).Strings passed in will consist of only letters and spaces.Spaces will be included only when more than one word is present.
+
+//     Examples:
+
+// spinWords("Hey fellow warriors") => returns "Hey wollef sroirraw"
+// spinWords("This is a test") => returns "This is a test"
+// spinWords("This is another test")=> returns "This is rehtona test"
+function spinWords(words) {
+    return words.split(' ').map(function (word) {
+        return (word.length > 4) ? word.split('').reverse().join('') : word;
+    }).join(' ');
 }
