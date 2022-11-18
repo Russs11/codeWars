@@ -218,7 +218,34 @@
 // [5, 8, 6, 3, 4]  => [3, 8, 6, 5, 4]
 // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  => [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
 
-function sortArray(array) {
-    const odds = array.filter((x) => x % 2).sort((a, b) => a - b);
-    return array.map((x) => x % 2 ? odds.shift() : x)
+// function sortArray(array) {
+//     const odds = array.filter((x) => x % 2).sort((a, b) => a - b);
+//     return array.map((x) => x % 2 ? odds.shift() : x)
+// }
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+// For example(Input-- > Output):
+
+// 39 -- > 3(because 3 * 9 = 27, 2 * 7 = 14, 1 * 4 = 4 and 4 has only one digit)
+// 999 -- > 4(because 9 * 9 * 9 = 729, 7 * 2 * 9 = 126, 1 * 2 * 6 = 12, and finally 1 * 2 = 2)
+// 4 -- > 0(because 4 is already a one - digit number)
+
+function persistence(num) {
+    let numArr = []
+    numArr = ('' + num).split('')
+    let iterationNum = 0
+    function counter(arr) {
+        let result = 1
+        arr.forEach(item => {
+            result *= item
+        })
+        result = ('' + result).split('')
+        return result
+    }
+
+    while (numArr.length > 1) {
+        iterationNum++
+        numArr = counter(numArr)
+    }
+    return iterationNum
 }
