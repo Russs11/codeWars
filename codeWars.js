@@ -230,22 +230,43 @@
 // 999 -- > 4(because 9 * 9 * 9 = 729, 7 * 2 * 9 = 126, 1 * 2 * 6 = 12, and finally 1 * 2 = 2)
 // 4 -- > 0(because 4 is already a one - digit number)
 
-function persistence(num) {
-    let numArr = []
-    numArr = ('' + num).split('')
-    let iterationNum = 0
-    function counter(arr) {
-        let result = 1
-        arr.forEach(item => {
-            result *= item
-        })
-        result = ('' + result).split('')
-        return result
-    }
+// function persistence(num) {
+//     let numArr = []
+//     numArr = ('' + num).split('')
+//     let iterationNum = 0
+//     function counter(arr) {
+//         let result = 1
+//         arr.forEach(item => {
+//             result *= item
+//         })
+//         result = ('' + result).split('')
+//         return result
+//     }
 
-    while (numArr.length > 1) {
-        iterationNum++
-        numArr = counter(numArr)
-    }
-    return iterationNum
+//     while (numArr.length > 1) {
+//         iterationNum++
+//         numArr = counter(numArr)
+//     }
+//     return iterationNum
+// }
+// Write function bmi that calculates body mass index(bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+function bmi(weight, height) {
+    let bmi = weight / (height * height);
+    if (bmi <= 18.5)
+        return "Underweight";
+    if (bmi <= 25)
+        return "Normal";
+    if (bmi <= 30)
+        return "Overweight";
+    if (bmi > 30)
+        return "Obese";
 }
