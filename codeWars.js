@@ -307,9 +307,23 @@
 // For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
 //     Note: for this kata y isn't considered a vowel.
-function disemvowel(str) {
-    return str.replace(/[aeiou]/gi, '')
-}
+// function disemvowel(str) {
+//     return str.replace(/[aeiou]/gi, '')
+// }
 
-disemvowel("This website is for losers LOL!")
-console.log(disemvowel("This website is for losers LOL!"));
+// disemvowel("This website is for losers LOL!")
+// console.log(disemvowel("This website is for losers LOL!"));
+
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string.You don't have to worry with strings with less than two characters.
+
+// function removeChar(str) {
+//     let len = str.length - 2
+//     let arr = str.split('')
+//     let res = arr.splice(1, len).join('')
+//     return res;
+// };
+
+function removeChar(str) {
+    return str.slice(1, -1);
+}
+console.log(removeChar("removefirtstandlastword"));
