@@ -339,22 +339,32 @@
 // 999 -- > 4(because 9 * 9 * 9 = 729, 7 * 2 * 9 = 126, 1 * 2 * 6 = 12, and finally 1 * 2 = 2)
 // 4 -- > 0(because 4 is already a one - digit number)
 
-function persistence(num) {
-    let numArr = []
-    numArr = ('' + num).split('')
-    let iterationNum = 0
-    function counter(arr) {
-        let result = 1
-        arr.forEach(item => {
-            result *= item
-        })
-        result = ('' + result).split('')
-        return result
-    }
+// function persistence(num) {
+//     let numArr = []
+//     numArr = ('' + num).split('')
+//     let iterationNum = 0
+//     function counter(arr) {
+//         let result = 1
+//         arr.forEach(item => {
+//             result *= item
+//         })
+//         result = ('' + result).split('')
+//         return result
+//     }
 
-    while (numArr.length > 1) {
-        iterationNum++
-        numArr = counter(numArr)
-    }
-    return iterationNum
+//     while (numArr.length > 1) {
+//         iterationNum++
+//         numArr = counter(numArr)
+//     }
+//     return iterationNum
+// }
+
+function squareSum(numbers) {
+    let square = numbers.map(item => {
+        return item * item
+    })
+    let sum = square.reduce((a, b) => a + b, 0)
+    return sum
 }
+
+squareSum([1, 2, 2])
