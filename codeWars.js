@@ -359,12 +359,33 @@
 //     return iterationNum
 // }
 
-function squareSum(numbers) {
-    let square = numbers.map(item => {
-        return item * item
-    })
-    let sum = square.reduce((a, b) => a + b, 0)
-    return sum
-}
+// function squareSum(numbers) {
+//     let square = numbers.map(item => {
+//         return item * item
+//     })
+//     let sum = square.reduce((a, b) => a + b, 0)
+//     return sum
+// }
 
-squareSum([1, 2, 2])
+// squareSum([1, 2, 2])
+
+// You are given an odd - length array of integers, in which all of them are the same, except for one single number.
+
+// Complete the method which accepts such an array, and returns that single different number.
+
+// The input array will always be valid!(odd - length >= 3)
+
+// Examples
+// [1, 1, 2] ==> 2
+// [17, 17, 3, 17, 17, 17, 17] ==> 3
+
+function stray(numbers) {
+    numbers = numbers.sort((a, b) => a - b);
+    if (numbers[0] !== numbers[1]) {
+        return numbers[0];
+    }
+    else {
+        return numbers[numbers.length - 1];
+    }
+}
+console.log(stray([1, 1, 1, 2]))
