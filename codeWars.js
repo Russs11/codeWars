@@ -379,13 +379,28 @@
 // [1, 1, 2] ==> 2
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
-function stray(numbers) {
-    numbers = numbers.sort((a, b) => a - b);
-    if (numbers[0] !== numbers[1]) {
-        return numbers[0];
+// function stray(numbers) {
+//     numbers = numbers.sort((a, b) => a - b);
+//     if (numbers[0] !== numbers[1]) {
+//         return numbers[0];
+//     }
+//     else {
+//         return numbers[numbers.length - 1];
+//     }
+// }
+// console.log(stray([1, 1, 1, 2]))
+//Count characters in your string
+//The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+// What if the string is empty ? Then the result should be empty object literal, {}.
+function count(string) {
+    let obj = {}
+    for (let i = 0; i < string.length; i++) {
+        let l = string.charAt(i)
+        obj[l] = (isNaN(obj[l]) ? 1 : obj[l] + 1);
     }
-    else {
-        return numbers[numbers.length - 1];
-    }
+
+    console.log(obj)
 }
-console.log(stray([1, 1, 1, 2]))
+
+count('banana')
