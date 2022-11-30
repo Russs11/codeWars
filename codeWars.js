@@ -420,13 +420,26 @@
 // The first argument can be an empty string
 // The second string argument will always be of length 1
 
-function strCount(str, letter) {
-    let count = 0
-    for (let i = 0; i < str.length; i++) {
-        if (letter === str.charAt(i))
-        count++
-    }
-    console.log(count)
+// function strCount(str, letter) {
+//     let count = 0
+//     for (let i = 0; i < str.length; i++) {
+//         if (letter === str.charAt(i))
+//         count++
+//     }
+//     console.log(count)
+// }
+
+// strCount('hello', 'l')
+
+// Sentence Smash
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word.Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+// Example
+// ['hello', 'world', 'this', 'is', 'great']  => 'hello world this is great'
+
+function smash(words) {
+   let res = words.join(' ')
+    console.log(res);
 }
 
-strCount('hello', 'l')
+smash(['hello', 'world', 'this', 'is', 'great'])
