@@ -464,14 +464,17 @@
 
 // The middle character(s) of the word represented as a string.
 
-function getMiddle(s) {
-    let arr = s.split("");
-    while (arr.length > 2) {
-        arr.pop();
-        arr.shift();
-    }
-    console.log(arr.join(""));
-    return arr.join("");
-}
+// function getMiddle(s) {
+//     let arr = s.split("");
+//     while (arr.length > 2) {
+//         arr.pop();
+//         arr.shift();
+//     }
+//     console.log(arr.join(""));
+//     return arr.join("");
+// }
 
-getMiddle("middle")
+// getMiddle("middle")
+function booleanToString(b) {
+    return b === true ? 'true' : 'false'
+}
