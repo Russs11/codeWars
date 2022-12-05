@@ -437,22 +437,22 @@
 // Example
 // ['hello', 'world', 'this', 'is', 'great']  => 'hello world this is great'
 
-// function smash(words) {
-<<<<<<< HEAD
-//     let res = words.join(' ')
-//     console.log(res);
+// // function smash(words) {
+// <<<<<<< HEAD
+// //     let res = words.join(' ')
+// //     console.log(res);
+// // }
+
+// // smash(['hello', 'world', 'this', 'is', 'great']);
+
+// function getAge(inputString){
+// // return the girl's correct age as an integer. Happy coding :) 
+//    let res = inputString.split(' ').join(' ').toString()
+//     console.log(res[0]);
 // }
 
-// smash(['hello', 'world', 'this', 'is', 'great']);
-
-function getAge(inputString){
-// return the girl's correct age as an integer. Happy coding :) 
-   let res = inputString.split(' ').join(' ').toString()
-    console.log(res[0]);
-}
-
-getAge("4 years old")
-=======
+// getAge("4 years old")
+// =======
 //    let res = words.join(' ')
 //     console.log(res);
 // }
@@ -490,7 +490,7 @@ getAge("4 years old")
 // }
 
 // getMiddle("middle")
-function booleanToString(b) {
-    return b === true ? 'true' : 'false'
-}
->>>>>>> 96970bfd6aa54421e94f785e0be7c7e18e83e6d6
+// function booleanToString(b) {
+//     return b === true ? 'true' : 'false'
+// }
+
