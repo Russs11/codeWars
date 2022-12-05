@@ -437,9 +437,17 @@
 // Example
 // ['hello', 'world', 'this', 'is', 'great']  => 'hello world this is great'
 
-function smash(words) {
-   let res = words.join(' ')
-    console.log(res);
+// function smash(words) {
+//     let res = words.join(' ')
+//     console.log(res);
+// }
+
+// smash(['hello', 'world', 'this', 'is', 'great']);
+
+function getAge(inputString){
+// return the girl's correct age as an integer. Happy coding :) 
+   let res = inputString.split(' ').join(' ').toString()
+    console.log(res[0]);
 }
 
-smash(['hello', 'world', 'this', 'is', 'great'])
+getAge("4 years old")
