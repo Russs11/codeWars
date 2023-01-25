@@ -446,7 +446,7 @@
 // // smash(['hello', 'world', 'this', 'is', 'great']);
 
 // function getAge(inputString){
-// // return the girl's correct age as an integer. Happy coding :) 
+// // return the girl's correct age as an integer. Happy coding :)
 //    let res = inputString.split(' ').join(' ').toString()
 //     console.log(res[0]);
 // }
@@ -494,3 +494,23 @@
 //     return b === true ? 'true' : 'false'
 // }
 
+// There was a test in your class and you passed it. Congratulations!
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// Return True if you're better, else False!
+
+// Note:
+// Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
+function betterThanAverage(classPoints, yourPoints) {
+   let res = classPoints.forEach(element => {
+       let sum = (element += element) / classPoints.length
+       console.log(sum);
+   });
+    console.log(res);
+    console.log(yourPoints > res ? true : false); 
+        
+}
+
+betterThanAverage([5, 5, 6], 5)
