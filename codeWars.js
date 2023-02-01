@@ -504,21 +504,17 @@
 // Note:
 // Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
 // function betterThanAverage(classPoints, yourPoints) {
-//    let res = classPoints.forEach(element => {
-//        let sum = (element += element) / classPoints.length
-//        console.log(sum);
-//    });
-//     console.log(res);
-//     console.log(yourPoints > res ? true : false);
-
+    
+//   return  classPoints.reduce((a, b) => a + b, 0)/ classPoints.length < yourPoints ? true : false
+    
 // }
 
-// betterThanAverage([5, 5, 6], 5)
+// betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50)
 
-function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
-   const sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals
-    // return sum
-    console.log(sum);
-}
+// function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+//    const sum = laLigaGoals + copaDelReyGoals + championsLeagueGoals
+//     // return sum
+//     console.log(sum);
+// }
 
-goals(10, 5, 2)
+// goals(10, 5, 2)
