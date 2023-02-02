@@ -539,12 +539,25 @@
 
 // All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
 
-function sortByLength(array) {
-    const compare = (a, b) =>{
-        return a.length - b.length
-    }
-    // return array.sort()
-    console.log(array.sort(compare));
-};
+// function sortByLength(array) {
+//     const compare = (a, b) =>{
+//         return a.length - b.length
+//     }
+//     // return array.sort()
+//     console.log(array.sort(compare));
+// };
 
-sortByLength(["Beg", "Life", "I", "To"])
+// sortByLength(["Beg", "Life", "I", "To"])
+
+
+// Build a function that returns an array of integers from n to 1 where n > 0.
+
+// Example: n = 5 -- > [5, 4, 3, 2, 1]
+const reverseSeq = (n) => {
+    const arr = []
+    for (let i = 1; i <= n; i++){
+        arr.push(i)
+    }
+    console.log(arr.reverse());
+};
+reverseSeq(5)
