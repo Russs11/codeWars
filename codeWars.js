@@ -522,8 +522,29 @@
 
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
-function grow(x) {
-return x.reduce((a, b) => a * b);
-}
+// function grow(x) {
+// return x.reduce((a, b) => a * b);
+// }
 
-grow([4, 1, 1, 1, 4])
+// grow([4, 1, 1, 1, 4])
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+// For example, if this array were passed as an argument:
+
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+// Your function would return the following array:
+
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+
+function sortByLength(array) {
+    const compare = (a, b) =>{
+        return a.length - b.length
+    }
+    // return array.sort()
+    console.log(array.sort(compare));
+};
+
+sortByLength(["Beg", "Life", "I", "To"])
