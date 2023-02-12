@@ -576,6 +576,20 @@
 // Implement a function that accepts 3 integer values a, b, c.The function should return true if a triangle can be built with the sides of given length and false in any other case.
 
 // (In this case, all triangles must have surface greater than 0 to be accepted).
-function isTriangle(a, b, c) {
-    return a + b > c && a + c > b && c + b > a;
+// function isTriangle(a, b, c) {
+//     return a + b > c && a + c > b && c + b > a;
+// }
+// If you can't sleep, just count sheep!!
+
+// Task:
+// Given a non - negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...".Input will always be valid, i.e.no negative integers.
+var countSheep = function (num) {
+    let res = []
+    for (let i = 0; i < num; i++){
+       res.push(`${i+1} sheep...`)
+    }
+    // return res.join('')
+    console.log(res.join(''));
 }
+
+countSheep(3)
