@@ -553,11 +553,22 @@
 // Build a function that returns an array of integers from n to 1 where n > 0.
 
 // Example: n = 5 -- > [5, 4, 3, 2, 1]
-const reverseSeq = (n) => {
-    const arr = []
-    for (let i = 1; i <= n; i++){
-        arr.push(i)
-    }
-    console.log(arr.reverse());
-};
-reverseSeq(5)
+// const reverseSeq = (n) => {
+//     const arr = []
+//     for (let i = 1; i <= n; i++){
+//         arr.push(i)
+//     }
+//     console.log(arr.reverse());
+// };
+// reverseSeq(5)
+// Your task is to make a function that can take any non - negative integer as an argument and return it with its digits in descending order.Essentially, rearrange the digits to create the highest possible number.
+
+//     Examples:
+// Input: 42145 Output: 54421
+
+// Input: 145263 Output: 654321
+
+// Input: 123456789 Output: 987654321
+function descendingOrder(n) {
+    return parseInt(String(n).split('').sort().reverse().join(''))
+}
