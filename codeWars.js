@@ -614,9 +614,28 @@
 // We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 // Advanced users may find this extremely easy and can easily write this in one line.
 
-function sum(numbers) {
-    "use strict";
-  return numbers.reduce((a,b) => a + b, 0)
-   console.log(res); 
-};
-sum([1, 5.2, 4, 0, -1])
+// function sum(numbers) {
+//     "use strict";
+//   return numbers.reduce((a,b) => a + b, 0)
+//    console.log(res);
+// };
+// sum([1, 5.2, 4, 0, -1])
+
+// DESCRIPTION:
+// Complete the function that takes two integers(a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+// For example:
+
+// a = 1
+// b = 4
+// --> [1, 2, 3, 4]
+
+function between(a, b) {
+    let res = []
+    for (let i = a; i <= b; i++){
+        res.push(i)
+    }
+    console.log(res);
+}
+
+between(1, 4)
