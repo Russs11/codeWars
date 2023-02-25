@@ -643,19 +643,26 @@
 // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 
 // Note: input will never be an empty string
-function fakeBin(x) {
-	let stringArr = x.split('')
-	let toNum = stringArr.map(Number);
-	for (let i = 0; i < toNum.length; i++) {
-		if (toNum[i] < 5) {
-			toNum[i] = 0
-		} else {
-			toNum[i] = 1
-		}
-	}
+// function fakeBin(x) {
+// 	let stringArr = x.split('')
+// 	let toNum = stringArr.map(Number);
+// 	for (let i = 0; i < toNum.length; i++) {
+// 		if (toNum[i] < 5) {
+// 			toNum[i] = 0
+// 		} else {
+// 			toNum[i] = 1
+// 		}
+// 	}
 
-	return toNum.join('')
+// 	return toNum.join('')
+// }
+// function fakeBin(x) {
+// 	return x.split('').map(n => n < 5 ? 0 : 1).join('');
+// }
+// Вывести в консоль "я люблю js!", пройдя циклом в обратном порядке.
+const arr = ['!', 'JS', 'люблю', 'Я']
+const res = []
+for (let i = arr.length -1; i >= 0; i--){
+	res.push(arr[i])
 }
-function fakeBin(x) {
-	return x.split('').map(n => n < 5 ? 0 : 1).join('');
-}
+console.log(res.join(' '));
