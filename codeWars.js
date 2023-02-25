@@ -660,9 +660,26 @@
 // 	return x.split('').map(n => n < 5 ? 0 : 1).join('');
 // }
 // Вывести в консоль "я люблю js!", пройдя циклом в обратном порядке.
-const arr = ['!', 'JS', 'люблю', 'Я']
-const res = []
-for (let i = arr.length -1; i >= 0; i--){
-	res.push(arr[i])
+// const arr = ['!', 'JS', 'люблю', 'Я']
+// const res = []
+// for (let i = arr.length -1; i >= 0; i--){
+// 	res.push(arr[i])
+// }
+// console.log(res.join(' '));
+
+
+function findDuplicate(str) {
+	const arr = str.split('')
+	const res = []
+	const repeat = []
+	console.log(res);
+	for (element of arr) {
+		if (res.includes(element)) {
+			repeat.push(element)
+		}
+		res.push(element)
+	}
+console.log(repeat);
 }
-console.log(res.join(' '));
+
+findDuplicate('recede')
