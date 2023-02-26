@@ -504,9 +504,9 @@
 // Note:
 // Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
 // function betterThanAverage(classPoints, yourPoints) {
-    
+
 //   return  classPoints.reduce((a, b) => a + b, 0)/ classPoints.length < yourPoints ? true : false
-    
+
 // }
 
 // betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50)
@@ -668,18 +668,22 @@
 // console.log(res.join(' '));
 
 
-function findDuplicate(str) {
-	const arr = str.split('')
-	const res = []
-	const repeat = []
-	console.log(res);
-	for (element of arr) {
-		if (res.includes(element)) {
-			repeat.push(element)
-		}
-		res.push(element)
-	}
-console.log(repeat);
+const duplicateEncode = word => {
+    let newString = ''
+    word = word.toLowerCase() || word
+    word.split('').filter((x, index) => {
+        if (word.indexOf(x) !== index) {
+            newString += ')'
+        } else if (word.lastIndexOf(x) !== index) {
+            newString += ')'
+        } else {
+            newString += '('
+        }
+    })
+    return newString
 }
 
-findDuplicate('recede')
+console.log('duplicateEncode(Success):', duplicateEncode('Success'));
+
+
+
