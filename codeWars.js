@@ -714,15 +714,20 @@
 // }
 
 // cone.log(isSquare(4));
-const multiply = (a, b)=>{
-	return a * b
-}
-const sum = (a, b) =>{
-	return a+b
-}
-function calculate(a, b, fn) {
-	const res = fn(a, b)
-	return res
-}
+// const multiply = (a, b)=>{
+// 	return a * b
+// }
+// const sum = (a, b) =>{
+// 	return a+b
+// }
+// function calculate(a, b, fn) {
+// 	const res = fn(a, b)
+// 	return res
+// }
 
-console.log(calculate(3, 5, multiply));
+// console.log(calculate(3, 5, multiply));
+function index(array, n) {
+	return !array[n]? -1 : array[n]**n
+}
+// index([1, 2, 3, 4], 2)
+console.log(index([1, 2, 3, 4], 5));
