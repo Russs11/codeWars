@@ -713,5 +713,16 @@
 //     }
 // }
 
-// console.log(isSquare(4));
+// cone.log(isSquare(4));
+const multiply = (a, b)=>{
+	return a * b
+}
+const sum = (a, b) =>{
+	return a+b
+}
+function calculate(a, b, fn) {
+	const res = fn(a, b)
+	return res
+}
 
+console.log(calculate(3, 5, multiply));
