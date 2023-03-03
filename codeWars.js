@@ -758,7 +758,9 @@ function solution(str, ending) {
 	return arr.splice(arr.length - ending.length).join('').includes(ending);
 	// return str.includes(res)
 }
-
+function solution2(str, ending) {
+	return str.endsWith(ending);
+}
 
 // solution('abcde', 'cde')
 solution('abcde', 'cde')
