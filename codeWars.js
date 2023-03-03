@@ -777,16 +777,45 @@
 
 // gimme([5, 10, 14]) => 1
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
-function gimme(triplet) {
-	let min = Math.min.apply(null, triplet)
-	let max = Math.max.apply(null, triplet)
-	for (let i = 0; i < triplet.length; i++){
-		if (triplet[i] < max && triplet[i] > min) {
-			return triplet.indexOf(triplet[i])
-		}
+// function gimme(triplet) {
+// 	let min = Math.min.apply(null, triplet)
+// 	let max = Math.max.apply(null, triplet)
+// 	for (let i = 0; i < triplet.length; i++){
+// 		if (triplet[i] < max && triplet[i] > min) {
+// 			return triplet.indexOf(triplet[i])
+// 		}
+// 	}
+// 	}
+
+
+// console.log(gimme([5.9, 10.4, 14.2]));
+
+// Take an array and remove every second element from the array.Always keep the first element and start removing with the next element.
+
+// 	Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...]-- > ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+// Take an array and remove every second element from the array.Always keep the first element and start removing with the next element.
+
+// 	Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...]-- > ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+function removeEveryOther(arr) {
+	//your code here
+	let res = []
+	arr.forEach((element, index) => {
+		if (index % 2 !== 1) {
+		res.push(element)
 	}
-	}
-
-
-console.log(gimme([5.9, 10.4, 14.2]));
-
+	})
+	return res
+}
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+function removeEveryOther(arr) {
+	return arr.filter(function (elem, index) {
+		return index % 2 === 0;
+	});
+}
+// removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])
