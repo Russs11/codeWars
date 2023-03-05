@@ -802,20 +802,32 @@
 // ["Keep", "Remove", "Keep", "Remove", "Keep", ...]-- > ["Keep", "Keep", "Keep", ...]
 
 // None of the arrays will be empty, so you don't have to worry about that!
-function removeEveryOther(arr) {
-	//your code here
-	let res = []
-	arr.forEach((element, index) => {
-		if (index % 2 !== 1) {
-		res.push(element)
-	}
-	})
-	return res
-}
-console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-function removeEveryOther(arr) {
-	return arr.filter(function (elem, index) {
-		return index % 2 === 0;
-	});
-}
+// function removeEveryOther(arr) {
+// 	//your code here
+// 	let res = []
+// 	arr.forEach((element, index) => {
+// 		if (index % 2 !== 1) {
+// 		res.push(element)
+// 	}
+// 	})
+// 	return res
+// }
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+// function removeEveryOther(arr) {
+// 	return arr.filter(function (elem, index) {
+// 		return index % 2 === 0;
+// 	});
+// }
 // removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])
+class SmallestIntegerFinder {
+        findSmallestInt(args) {
+            let res = args.sort((a, b) => {
+                return a - b
+            }, 0)
+            console.log(res[0]);
+        }
+    }
+
+const res = new SmallestIntegerFinder ()
+    
+SmallestIntegerFinder.findSmallestInt([2, 3, 78, -11])
