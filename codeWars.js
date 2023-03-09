@@ -820,14 +820,14 @@
 // }
 // removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])
 class SmallestIntegerFinder {
-        findSmallestInt(args) {
-            let res = args.sort((a, b) => {
-                return a - b
-            }, 0)
-            console.log(res[0]);
-        }
-    }
+	findSmallestInt(args) {
+		return args.sort(function (a, b) {
+			return a - b;
+		})[0];
+	}
+}
 
-const res = new SmallestIntegerFinder ()
+const SmallestInteger = new SmallestIntegerFinder()
     
-SmallestIntegerFinder.findSmallestInt([2, 3, 78, -11])
+// SmallestInteger.findSmallestInt([78, 56, 232, 12, 8])
+console.log( SmallestInteger.findSmallestInt([78, 56, 232, 12, 8]));
