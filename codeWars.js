@@ -819,15 +819,30 @@
 // 	});
 // }
 // removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])
-class SmallestIntegerFinder {
-	findSmallestInt(args) {
-		return args.sort(function (a, b) {
-			return a - b;
-		})[0];
-	}
+// class SmallestIntegerFinder {
+// 	findSmallestInt(args) {
+// 		return args.sort(function (a, b) {
+// 			return a - b;
+// 		})[0];
+// 	}
+// }
+
+// const SmallestInteger = new SmallestIntegerFinder()
+    
+// // SmallestInteger.findSmallestInt([78, 56, 232, 12, 8])
+// console.log( SmallestInteger.findSmallestInt([78, 56, 232, 12, 8]));
+
+function generateHashtag(str) {
+	let arr = str.split(' ')
+	// str.replace(str[0], )
+	let arr2 = arr
+		.map((word, i) => {
+		// console.log(word[0].toUpperCase());
+		return word[0].toUpperCase() + word.slice(1)
+		})
+		.join('')
+
+	console.log(arr2);
 }
 
-const SmallestInteger = new SmallestIntegerFinder()
-    
-// SmallestInteger.findSmallestInt([78, 56, 232, 12, 8])
-console.log( SmallestInteger.findSmallestInt([78, 56, 232, 12, 8]));
+generateHashtag("Hello there thanks for trying my Kata") 
