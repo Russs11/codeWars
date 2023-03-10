@@ -891,11 +891,29 @@
 // "camel case word".camelCase() => CamelCaseWord
 // Don't forget to rate this kata! Thanks :)
 
-String.prototype.camelCase = function (str) {
-	return this.split(' ').map(function (el) {
-		return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
-	}).join('');
-}
+// String.prototype.camelCase = function (str) {
+// 	return this.split(' ').map(function (el) {
+// 		return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+// 	}).join('');
+// }
 
-// "test case".camelCase()
-console.log( "test case".camelCase());
+// // "test case".camelCase()
+// console.log( "test case".camelCase()
+
+//найти  самое короткое слово в строке
+function minLen(str) {
+	let arr = str.split(' ')
+	console.log(arr);
+	let res = arr.reduce((acc, word) => {
+		if (acc.length < word.length) {
+			// console.log(acc);
+			return acc
+		}
+		else {
+			return word 
+		}
+	}, 0)
+	
+	console.log(res);
+}
+minLen("Hi my Name is Ruslan")
