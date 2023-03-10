@@ -844,17 +844,14 @@
 // " Hello there thanks for trying my Kata"  => "#HelloThereThanksForTryingMyKata"
 // "    Hello     World   "                  => "#HelloWorld"
 // ""                                        => false
+
 function generateHashtag(str) {
-	let arr = str.split(' ')
-	// str.replace(str[0], )
-	let arr2 = arr
-		.map((word, i) => {
-		// console.log(word[0].toUpperCase());
-		return word[0].toUpperCase() + word.slice(1)
-		})
-		.join('')
+	if (!str || str.length < 1) return false;
 
-	console.log(arr2);
+	var r = '#' + str.split(' ').map(function (el) {
+		return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+	}).join('');
+	return r.length > 140 ? false : r;
 }
-
-generateHashtag("Hello there thanks for trying my Kata") 
+// generateHashtag("") 
+console.log(generateHashtag("#") );
