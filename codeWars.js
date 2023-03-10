@@ -845,24 +845,24 @@
 // "    Hello     World   "                  => "#HelloWorld"
 // ""                                        => false
 
-function generateHashtag(str) {
-	if (!str || str.length < 1) return false;
+// function generateHashtag(str) {
+// 	if (!str || str.length < 1) return false;
 
-	var r = '#' + str.split(' ').map(function (el) {
-		return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
-	}).join('');
-	return r.length > 140 ? false : r;
-}
-// generateHashtag("") 
-console.log(generateHashtag("#"));
+// 	let r = '#' + str.split(' ').map(function (el) {
+// 		return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+// 	}).join('');
+// 	return r.length > 140 ? false : r;
+// }
+// // generateHashtag("")
+// console.log(generateHashtag("#"));
 
 
 // Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
 
 // [Make sure you type the exact thing I wrote or the program may not execute properly]
-function greet(name) {
-	return `Hello, ${name} how are you doing today?`
-}
+// function greet(name) {
+// 	return `Hello, ${name} how are you doing today?`
+// }
 
 // Create a function that takes 2 integers in form of a string as an input, and outputs the sum(also as a string):
 
@@ -878,6 +878,24 @@ function greet(name) {
 // If either input is an empty string, consider it as zero.
 
 // Inputs and the expected output will never exceed the signed 32 - bit integer limit(2 ^ 31 - 1)
-function sumStr(a, b) {
-	return String(Number(a) + Number(b));
+// function sumStr(a, b) {
+// 	return String(Number(a) + Number(b));
+// }
+
+
+// Write simple.camelCase method(camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings.All words must have their first letter capitalized without spaces.
+
+// For instance:
+
+// "hello case".camelCase() => HelloCase
+// "camel case word".camelCase() => CamelCaseWord
+// Don't forget to rate this kata! Thanks :)
+
+String.prototype.camelCase = function (str) {
+	return this.split(' ').map(function (el) {
+		return el.charAt(0).toUpperCase() + el.slice(1).toLowerCase();
+	}).join('');
 }
+
+// "test case".camelCase()
+console.log( "test case".camelCase());
