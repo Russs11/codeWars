@@ -901,19 +901,52 @@
 // console.log( "test case".camelCase()
 
 //найти  самое короткое слово в строке
-function minLen(str) {
-	let arr = str.split(' ')
-	console.log(arr);
-	let res = arr.reduce((acc, word) => {
-		if (acc.length < word.length) {
-			// console.log(acc);
-			return acc
-		}
-		else {
-			return word 
-		}
-	}, 0)
+// function minLen(str) {
+// 	let arr = str.split(' ')
+// 	console.log(arr);
+// 	let res = arr.reduce((acc, word) => {
+// 		if (acc.length < word.length) {
+// 			// console.log(acc);
+// 			return acc
+// 		}
+// 		else {
+// 			return word
+// 		}
+// 	}, 0)
 	
-	console.log(res);
+// 	console.log(res);
+// }
+// minLen("Hi my Name is Ruslan")
+// DESCRIPTION:
+// Consider an array / list of sheep where some sheep may be missing from their place.We need a function that counts the number of sheep present in the array(true means present).
+
+// For example,
+
+//     [true, true, true, false,
+//         true, true, true, true,
+//         true, false, true, false,
+//         true, false, false, true,
+//         true, true, true, true,
+//         false, false, true, true]
+// The correct answer would be 17.
+
+// Hint: Don't forget to check for bad values like null/undefined
+function countSheeps(array1) {
+    // TODO May the force be with you
+    let  counter = 0
+    array1.forEach((element) => {
+        if (element === true) {
+        counter ++
+        }  
+    })
+        
+
+    return `There are ${counter} sheeps in total` 
 }
-minLen("Hi my Name is Ruslan")
+
+countSheeps([true, true, true, false,
+    true, true, true, true,
+    true, false, true, false,
+    true, false, false, true,
+    true, true, true, true,
+    false, false, true, true])
