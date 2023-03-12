@@ -931,22 +931,60 @@
 // The correct answer would be 17.
 
 // Hint: Don't forget to check for bad values like null/undefined
-function countSheeps(array1) {
-    // TODO May the force be with you
-    let  counter = 0
-    array1.forEach((element) => {
-        if (element === true) {
-        counter ++
-        }  
-    })
+// function countSheeps(array1) {
+//     // TODO May the force be with you
+//     let  counter = 0
+//     array1.forEach((element) => {
+//         if (element === true) {
+//         counter ++
+//         }
+//     })
         
 
-    return `There are ${counter} sheeps in total` 
-}
+//     return `There are ${counter} sheeps in total`
+// }
 
-countSheeps([true, true, true, false,
-    true, true, true, true,
-    true, false, true, false,
-    true, false, false, true,
-    true, true, true, true,
-    false, false, true, true])
+// countSheeps([true, true, true, false,
+//     true, true, true, true,
+//     true, false, true, false,
+//     true, false, false, true,
+//     true, true, true, true,
+//     false, false, true, true])
+
+// function Fighter(name, health, damagePerAttack) {
+//     this.name = name;
+//     this.health = health;
+//     this.damagePerAttack = damagePerAttack;
+//     this.toString = function () { return this.name; }
+// }
+
+// function declareWinner(fighter1, fighter2, firstAttacker) {
+    
+// }
+
+// declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew")
+
+// const arr = [2, 4, 6, 8]
+// const avg = arr.reduce((acc, num , i) => {
+//     if (i !== arr.length - 1) {
+//     return acc + num
+//     } else {
+//         return (acc + num) / arr.length
+// }
+// }, 0)
+
+// console.log(avg);
+
+// DESCRIPTION:
+// You will be given an array a and a value x.All you need to do is check whether the provided array contains the value.
+
+// Array can contain numbers or strings.X can be either.
+
+// Return true if the array contains the value, false if not.
+
+// function check(a, x) {
+//         return (a.includes(x)) ? true : false;
+//     };
+// // check([66, 101], 66)
+// // check([66, 101], 66)
+// console.log(check([66, 101], 75))
