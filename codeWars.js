@@ -951,18 +951,7 @@
 //     true, true, true, true,
 //     false, false, true, true])
 
-// function Fighter(name, health, damagePerAttack) {
-//     this.name = name;
-//     this.health = health;
-//     this.damagePerAttack = damagePerAttack;
-//     this.toString = function () { return this.name; }
-// }
 
-// function declareWinner(fighter1, fighter2, firstAttacker) {
-    
-// }
-
-// declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew")
 
 // const arr = [2, 4, 6, 8]
 // const avg = arr.reduce((acc, num , i) => {
@@ -988,3 +977,42 @@
 // // check([66, 101], 66)
 // // check([66, 101], 66)
 // console.log(check([66, 101], 75))
+
+
+function Fighter(name, health, damagePerAttack) {
+    this.name = name;
+    this.health = health;
+    this.damagePerAttack = damagePerAttack;
+    this.toString = function () { return this.name; }
+}
+// Create a function that returns the name of the winner in a fight between two fighters.
+
+// Each fighter takes turns attacking the other and whoever kills the other first is victorious.Death is defined as having health <= 0.
+
+// Each fighter will be a Fighter object / instance.See the Fighter class below in your chosen language.
+
+// Both health and damagePerAttack(damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
+
+// Your function also receives a third argument, a string, with the name of the fighter that attacks first.
+// function declareWinner(fighter1, fighter2, firstAttacker) {
+
+    let attacker = fighter1.name === firstAttacker ? fighter1 : fighter2;
+    let defender = fighter1.name === firstAttacker ? fighter2 : fighter1;
+    let winner = null;
+
+    while (!winner) {
+
+        defender.health -= attacker.damagePerAttack;
+
+        attacker = attacker === fighter1 ? fighter2 : fighter1;
+        defender = defender === fighter1 ? fighter2 : fighter1;
+
+        if (defender.health <= 0) {
+            winner = attacker.name;
+        }
+    }
+
+    return winner;
+}
+
+declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew")
