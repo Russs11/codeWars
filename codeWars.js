@@ -903,18 +903,18 @@
 //найти  самое короткое слово в строке
 // function minLen(str) {
 // 	let arr = str.split(' ')
-// 	console.log(arr);
+//     console.log(arr);
+//     let arr2
 // 	let res = arr.reduce((acc, word) => {
-// 		if (acc.length < word.length) {
+// 		if (acc.length < word.length ) {
 // 			// console.log(acc);
-// 			return acc
+//           arr2.push(acc)
 // 		}
-// 		else {
-// 			return word
-// 		}
-// 	}, 0)
+		
+//     }, 0)
+    
 	
-// 	console.log(res);
+// 	console.log(arr2, res);
 // }
 // minLen("Hi my Name is Ruslan")
 // DESCRIPTION:
@@ -979,13 +979,8 @@
 // console.log(check([66, 101], 75))
 
 
-function Fighter(name, health, damagePerAttack) {
-    this.name = name;
-    this.health = health;
-    this.damagePerAttack = damagePerAttack;
-    this.toString = function () { return this.name; }
-}
-// Create a function that returns the name of the winner in a fight between two fighters.
+//
+// // Create a function that returns the name of the winner in a fight between two fighters.
 
 // Each fighter takes turns attacking the other and whoever kills the other first is victorious.Death is defined as having health <= 0.
 
@@ -994,25 +989,31 @@ function Fighter(name, health, damagePerAttack) {
 // Both health and damagePerAttack(damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
 
 // Your function also receives a third argument, a string, with the name of the fighter that attacks first.
+// function Fighter(name, health, damagePerAttack) {
+//     this.name = name;
+//     this.health = health;
+//     this.damagePerAttack = damagePerAttack;
+//     this.toString = function () { return this.name; }
+// }
 // function declareWinner(fighter1, fighter2, firstAttacker) {
 
-    let attacker = fighter1.name === firstAttacker ? fighter1 : fighter2;
-    let defender = fighter1.name === firstAttacker ? fighter2 : fighter1;
-    let winner = null;
+//     let attacker = fighter1.name === firstAttacker ? fighter1 : fighter2;
+//     let defender = fighter1.name === firstAttacker ? fighter2 : fighter1;
+//     let winner = null;
 
-    while (!winner) {
+//     while (!winner) {
 
-        defender.health -= attacker.damagePerAttack;
+//         defender.health -= attacker.damagePerAttack;
 
-        attacker = attacker === fighter1 ? fighter2 : fighter1;
-        defender = defender === fighter1 ? fighter2 : fighter1;
+//         attacker = attacker === fighter1 ? fighter2 : fighter1;
+//         defender = defender === fighter1 ? fighter2 : fighter1;
 
-        if (defender.health <= 0) {
-            winner = attacker.name;
-        }
-    }
+//         if (defender.health <= 0) {
+//             winner = attacker.name;
+//         }
+//     }
 
-    return winner;
-}
+//     return winner;
+// }
 
-declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew")
+// declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew")
