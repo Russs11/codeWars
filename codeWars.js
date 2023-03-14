@@ -1024,14 +1024,24 @@
 // 	* [1, 2, 3, 4] -> [4, 3, 2, 1]
 // 	* [9, 2, 0, 7] -> [7, 0, 2, 9]
 
-function reverseList(list) {
-	let res = []
-	for (let i = list.length -1; i >= 0; i--){
-	res.push(list[i])
-	}
-	console.log(res);
+// function reverseList(list) {
+// 	let res = []
+// 	for (let i = list.length -1; i >= 0; i--){
+// 	res.push(list[i])
+// 	}
+// 	console.log(res);
+// }
+// function reverseList(list) {
+// 	return list.reverse();
+// }
+// reverseList([1, 2, 3, 4])
+
+// Debugging sayHello function
+// 	The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard.It is your job to fix the code and get the program working again!
+
+// Example output:
+
+// Hello, Mr.Spock
+function sayHello(name) {
+	return `Hello, ${name}`
 }
-function reverseList(list) {
-	return list.reverse();
-}
-reverseList([1, 2, 3, 4])
