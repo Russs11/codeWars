@@ -1041,12 +1041,12 @@
 
 // Example output:
 
-// Hello, Mr.Spock
-function sayHello(name) {
-	return `Hello, ${name}`
-}
+// // Hello, Mr.Spock
+// function sayHello(name) {
+// 	return `Hello, ${name}`
+// }
 
-console.log(sayHello('Mr.Cook'));
+// console.log(sayHello('Mr.Cook'));
 
 // Nathan loves cycling.
 
@@ -1060,8 +1060,26 @@ console.log(sayHello('Mr.Cook'));
 
 // time = 6.7-- -> litres = 3
 
-// time = 11.8-- > litres = 5
+// // time = 11.8-- > litres = 5
 
-function litres(time) {
-	return Math.floor(time * 0.5);
+// function litres(time) {
+// 	return Math.floor(time * 0.5);
+// }
+// There is an array with some numbers.All numbers are equal except for one.Try to find it!
+
+// findUniq([1, 1, 1, 2, 1, 1]) === 2
+// findUniq([0, 0, 0.55, 0, 0]) === 0.55
+// It’s guaranteed that array contains at least 3 numbers.
+
+// The tests contain some very huge arrays, so think about performance.
+function findUniq(arr) {
+	arr.sort((a, b) => a - b);
+	if (arr[0] === arr[1]) {
+		return arr.pop()
+	}
+	else {
+		return arr[0]
+	}
 }
+// findUniq([3, 10, 3, 3, 3])
+console.log('findUniq([3, 10, 3, 3, 3]): ', findUniq([3, 10, 3, 3, 3]));
