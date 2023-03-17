@@ -828,7 +828,7 @@
 // }
 
 // const SmallestInteger = new SmallestIntegerFinder()
-    
+
 // // SmallestInteger.findSmallestInt([78, 56, 232, 12, 8])
 // console.log( SmallestInteger.findSmallestInt([78, 56, 232, 12, 8]));
 // The marketing team is spending way too much time typing in hashtags.
@@ -910,10 +910,10 @@
 // 			// console.log(acc);
 //           arr2.push(acc)
 // 		}
-		
+
 //     }, 0)
-    
-	
+
+
 // 	console.log(arr2, res);
 // }
 // minLen("Hi my Name is Ruslan")
@@ -939,7 +939,7 @@
 //         counter ++
 //         }
 //     })
-        
+
 
 //     return `There are ${counter} sheeps in total`
 // }
@@ -1105,10 +1105,24 @@
 
 
 function longestConsec(strarr, k) {
-	// your code
+	if (strarr.length === 0 || k > strarr.length) {
+		return ''
+	}
+	else if (k <= 0) {
+		return ''
+	}
+	for (let i = 0; i < k; i++) {
+		strarr.sort((a, b) => a.length - b.length)
+		if (strarr[0].length < strarr[1].length) {
+			return strarr.slice((strarr.length + 1) - k).reverse().join('')
+		}
+		if (strarr[0].length === strarr[1].length) {
+			return strarr.slice((strarr.length + 1) - k).join('')
+		}
+	}
 
-	
 }
 
 
-longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+// longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+console.log(longestConsec(["itvayloxrp", "wkppqsztdkmvcuwvereiupccauycnjutlv", "vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2));
