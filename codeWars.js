@@ -1105,24 +1105,15 @@
 
 
 function longestConsec(strarr, k) {
-	if (strarr.length === 0 || k > strarr.length) {
-		return ''
-	}
-	else if (k <= 0) {
-		return ''
-	}
-	for (let i = 0; i < k; i++) {
-		strarr.sort((a, b) => a.length - b.length)
-		if (strarr[0].length < strarr[1].length) {
-			return strarr.slice((strarr.length + 1) - k).reverse().join('')
-		}
-		if (strarr[0].length === strarr[1].length) {
-			return strarr.slice((strarr.length + 1) - k).join('')
+	var longest = "";
+	for (var i = 0; k > 0 && i <= strarr.length - k; i++) {
+		var tempStr = strarr.slice(i, i + k).join("");
+		if (tempStr.length > longest.length) {
+			longest = tempStr;
 		}
 	}
-
+	return longest;
 }
-
 
 // longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
 console.log(longestConsec(["itvayloxrp", "wkppqsztdkmvcuwvereiupccauycnjutlv", "vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2));
