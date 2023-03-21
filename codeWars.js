@@ -1133,39 +1133,48 @@
 
 // lovefunc(1, 4)
 //упражнение с кошельком из курса Ларичева
-const wallet = {
-	balance: 0,
-	operations: [],
-	increase: function (sum, reason) {
-		this.balance += sum
-		return true
-	},
-	decrease: function (sum, reason) {
-		if (this.balance < sum) {
-			console.log('Недостаточно баланса');
-			this.operations.push({
-				reason: reason,
-				sum: sum
-			})
-			return false
-		}
-		this.balance -= sum
-		this.operations.push({
-			reason: reason,
-			sum: -sum
-		})
-		return true
-	}, 
-	operationsLength: function () {
-		return this.operations.length
-	}
-}
+// const wallet = {
+// 	balance: 0,
+// 	operations: [],
+// 	increase: function (sum, reason) {
+// 		this.balance += sum
+// 		return true
+// 	},
+// 	decrease: function (sum, reason) {
+// 		if (this.balance < sum) {
+// 			console.log('Недостаточно баланса');
+// 			this.operations.push({
+// 				reason: reason,
+// 				sum: sum
+// 			})
+// 			return false
+// 		}
+// 		this.balance -= sum
+// 		this.operations.push({
+// 			reason: reason,
+// 			sum: -sum
+// 		})
+// 		return true
+// 	},
+// 	operationsLength: function () {
+// 		return this.operations.length
+// 	}
+// }
 
-// wallet.increase(10, 'пополнение')
-console.log( wallet.increase(3000, 'пополнение'));
-console.log( wallet.decrease(5000, 'покупка'));
-console.log(wallet.operationsLength());
-console.log( wallet.decrease(2000, 'покупка'));
-console.log( wallet.balance);
-// console.log( wallet.decrease(20, 'пополнение'));
-console.log(wallet.operations);
+// // wallet.increase(10, 'пополнение')
+// console.log( wallet.increase(3000, 'пополнение'));
+// console.log( wallet.decrease(5000, 'покупка'));
+// console.log(wallet.operationsLength());
+// console.log( wallet.decrease(2000, 'покупка'));
+// console.log( wallet.balance);
+// // console.log( wallet.decrease(20, 'пополнение'));
+// console.log(wallet.operations);
+// DESCRIPTION:
+// Write a function that returns a string in which firstname is swapped with last name.
+
+// 	Example(Input-- > Output)
+
+// "john McClane" -- > "McClane john"
+function nameSuffle(str) {
+	return str.split(' ').reverse().join(' ')
+}
