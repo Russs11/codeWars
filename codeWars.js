@@ -1122,13 +1122,50 @@
 
 // Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
-function lovefunc(flower1, flower2) {
-    // moment of truth
-    if (flower1 % 2 !== 0 && flower2 % 2 === 0 || flower1 % 2 === 0 && flower2 % 2 !== 0) {
-        return true
-    } else {
-        return false
-    }
+// function lovefunc(flower1, flower2) {
+//     // moment of truth
+//     if (flower1 % 2 !== 0 && flower2 % 2 === 0 || flower1 % 2 === 0 && flower2 % 2 !== 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// lovefunc(1, 4)
+//упражнение с кошельком из курса Ларичева
+const wallet = {
+	balance: 0,
+	operations: [],
+	increase: function (sum, reason) {
+		this.balance += sum
+		return true
+	},
+	decrease: function (sum, reason) {
+		if (this.balance < sum) {
+			console.log('Недостаточно баланса');
+			this.operations.push({
+				reason: reason,
+				sum: sum
+			})
+			return false
+		}
+		this.balance -= sum
+		this.operations.push({
+			reason: reason,
+			sum: -sum
+		})
+		return true
+	}, 
+	operationsLength: function () {
+		return this.operations.length
+	}
 }
 
-lovefunc(1, 4)
+// wallet.increase(10, 'пополнение')
+console.log( wallet.increase(3000, 'пополнение'));
+console.log( wallet.decrease(5000, 'покупка'));
+console.log(wallet.operationsLength());
+console.log( wallet.decrease(2000, 'покупка'));
+console.log( wallet.balance);
+// console.log( wallet.decrease(20, 'пополнение'));
+console.log(wallet.operations);
