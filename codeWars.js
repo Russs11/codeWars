@@ -1186,9 +1186,22 @@
 
 // 	Example:
 // move(3, 6) should equal 15
-function move(position, roll) {
-	return position + roll * 2
+// function move(position, roll) {
+// 	return position + roll * 2
+// }
+
+// move(3, 6)
+// console.log('move(3, 6): ', move(3, 6));
+// 
+
+function Ship(draft, crew) {
+	this.draft = draft;
+	this.crew = crew;
 }
 
-move(3, 6)
-console.log('move(3, 6): ', move(3, 6));
+Ship.prototype.isWorthIt = function () {
+	return 20 < this.draft - this.crew * 1.5;
+};
+const titanic = new Ship(15, 10)
+
+console.log(titanic.isWorthIt());
