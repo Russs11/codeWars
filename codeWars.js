@@ -1261,23 +1261,38 @@ class Block {
 
 }
 
-class Block {
-	constructor(data) {
-		[this.w, this.l, this.h] = data;
-	}
-	getWidth() { return this.w }
-	getLength() { return this.l }
-	getHeight() { return this.h }
-	getVolume() {
-		let { l, w, h } = this;
-		return w * l * h;
-	}
-	getSurfaceArea() {
-		let { l, w, h } = this;
-		return 2 * (l * w + l * h + w * h);
+// class Block {
+// 	constructor(data) {
+// 		[this.w, this.l, this.h] = data;
+// 	}
+// 	getWidth() { return this.w }
+// 	getLength() { return this.l }
+// 	getHeight() { return this.h }
+// 	getVolume() {
+// 		let { l, w, h } = this;
+// 		return w * l * h;
+// 	}
+// 	getSurfaceArea() {
+// 		let { l, w, h } = this;
+// 		return 2 * (l * w + l * h + w * h);
+// 	}
+// }
+
+// let b = new Block([2, 4, 6])
+
+// console.log(b.getSurfaceArea());
+
+class Class {
+
+	static getNumber() {
+	this.counter = 0
+		if (this.counter === 1) {
+			return 1; 
+		} else {
+			return this.counter * 2
+		}
 	}
 }
 
-let b = new Block([2, 4, 6])
-
-console.log(b.getSurfaceArea());
+// Class.getNumber()
+console.log('Class.getNumber(): ', Class.getNumber());
