@@ -1232,34 +1232,34 @@
 
 // b.getVolume() // -> 48
 
-// b.getSurfaceArea() // -> 88
-class Block {
+// // b.getSurfaceArea() // -> 88
+// class Block {
 
-	constructor(data) {
-		// ...
-		this.width = data[0]
-		this.length = data[1]
-		this.height = data[2]
+// 	constructor(data) {
+// 		// ...
+// 		this.width = data[0]
+// 		this.length = data[1]
+// 		this.height = data[2]
 
-	}
-	getWidth() {
-		return this.width
-	}
-	getLength() {
-		return this.length
-	}
-	getHeight() {
-		return this.height
-	}
-	getVolume() {
-		return this.width * this.height * this.length
-	}
-	getSurfaceArea() {
-		return 2 * ((this.width * this.length) + (this.length * this.height) + (this.width * this.height))
-	}
-	// ...
+// 	}
+// 	getWidth() {
+// 		return this.width
+// 	}
+// 	getLength() {
+// 		return this.length
+// 	}
+// 	getHeight() {
+// 		return this.height
+// 	}
+// 	getVolume() {
+// 		return this.width * this.height * this.length
+// 	}
+// 	getSurfaceArea() {
+// 		return 2 * ((this.width * this.length) + (this.length * this.height) + (this.width * this.height))
+// 	}
+// 	// ...
 
-}
+// }
 
 // class Block {
 // 	constructor(data) {
@@ -1325,22 +1325,22 @@ class Block {
 // console.log('generateName(): ', generateName());
 
 
-Fun with ES6 Classes #2 - Animals and Inheritance
-Overview
-Preloaded for you in this Kata is a class Animal:
+// Fun with ES6 Classes #2 - Animals and Inheritance
+// Overview
+// Preloaded for you in this Kata is a class Animal:
 
-class Animal {
-	constructor(name, age, legs, species, status) {
-		this.name = name;
-		this.age = age;
-		this.legs = legs;
-		this.species = species;
-		this.status = status;
-	}
-	introduce() {
-		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
-	}
-}
+// class Animal {
+// 	constructor(name, age, legs, species, status) {
+// 		this.name = name;
+// 		this.age = age;
+// 		this.legs = legs;
+// 		this.species = species;
+// 		this.status = status;
+// 	}
+// 	introduce() {
+// 		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+// 	}
+// }
 // Task
 // Define the following classes that inherit from Animal.
 
@@ -1359,93 +1359,114 @@ class Animal {
 
 // Dogs have an identical introduce / Introduce method as any other animal, but they have their own method called greetMaster / GreetMaster which accepts no arguments and returns "Hello (insert_master_name_here)"(of course not the literal string but replace the(insert_master_name_here) with the name of the dog's master).
 
-class Animal {
-	constructor(name, age, legs, species, status) {
-		this.name = name;
-		this.age = age;
-		this.legs = legs;
-		this.species = species;
-		this.status = status;
-	}
-	introduce() {
-		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
-	}
-}
+// class Animal {
+// 	constructor(name, age, legs, species, status) {
+// 		this.name = name;
+// 		this.age = age;
+// 		this.legs = legs;
+// 		this.species = species;
+// 		this.status = status;
+// 	}
+// 	introduce() {
+// 		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+// 	}
+// }
 
 
-class Shark extends Animal {
-	constructor(name, age, status) {
-		super(name, age, status)
-		this.legs = 0;
-		this.species = 'shark'
-		this.status = status
-	}
-	introduce() {
-		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+// class Shark extends Animal {
+// 	constructor(name, age, status) {
+// 		super(name, age, status)
+// 		this.legs = 0;
+// 		this.species = 'shark'
+// 		this.status = status
+// 	}
+// 	introduce() {
+// 		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
 		
-	}
-}
+// 	}
+// }
 
-class Cat extends Animal {
-	// Do the same here as you did for Shark - define your constructor function and any other methods you need
-	constructor(name, age, status) {
-		super(name, age, status)
-		this.legs = 4;
-		this.species = 'cat'
-		this.status = status
-	}
-	introduce() {
-		return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
-	}
-}
+// class Cat extends Animal {
+// 	// Do the same here as you did for Shark - define your constructor function and any other methods you need
+// 	constructor(name, age, status) {
+// 		super(name, age, status)
+// 		this.legs = 4;
+// 		this.species = 'cat'
+// 		this.status = status
+// 	}
+// 	introduce() {
+// 		return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
+// 	}
+// }
 
-class Dog extends Animal {
-	constructor(name, age, status, master) {
-		super(name, age, status)
-		this.legs = 4;
-		this.species = 'dog'
-		this.status = status
-		this.master = master
-	}
-	introduce() {
-		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
-	}
-	greetMaster() {
-		return `Hello, ${this.master}`
-	}
-}
+// class Dog extends Animal {
+// 	constructor(name, age, status, master) {
+// 		super(name, age, status)
+// 		this.legs = 4;
+// 		this.species = 'dog'
+// 		this.status = status
+// 		this.master = master
+// 	}
+// 	introduce() {
+// 		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+// 	}
+// 	greetMaster() {
+// 		return `Hello, ${this.master}`
+// 	}
+// }
 
-class Shark extends Animal {
-	constructor(name, age, status) {
-		super(name, age, 0, "shark", status);
-	}
-}
+// class Shark extends Animal {
+// 	constructor(name, age, status) {
+// 		super(name, age, 0, "shark", status);
+// 	}
+// }
 
-class Cat extends Animal {
-	constructor(name, age, status) {
-		super(name, age, 4, "cat", status);
-	}
-	introduce() {
-		return `${super.introduce()}  Meow meow!`;
-	}
-}
+// class Cat extends Animal {
+// 	constructor(name, age, status) {
+// 		super(name, age, 4, "cat", status);
+// 	}
+// 	introduce() {
+// 		return `${super.introduce()}  Meow meow!`;
+// 	}
+// }
 
-class Dog extends Animal {
-	constructor(name, age, status, master) {
-		super(name, age, 4, "dog", status);
-		this.master = master;
-	}
-	greetMaster() {
-		return `Hello ${this.master}`;
-	}
-}
+// class Dog extends Animal {
+// 	constructor(name, age, status, master) {
+// 		super(name, age, 4, "dog", status);
+// 		this.master = master;
+// 	}
+// 	greetMaster() {
+// 		return `Hello ${this.master}`;
+// 	}
+// }
 
-// let billy = new Shark("Billy", 3, "Alive and well")
+// // let billy = new Shark("Billy", 3, "Alive and well")
 
-// console.log(billy.introduce());
+// // console.log(billy.introduce());
 
-// let cathy = new Cat("Cathy", 7, "Playing with a ball of yarn")
-// console.log(cathy.introduce());
+// // let cathy = new Cat("Cathy", 7, "Playing with a ball of yarn")
+// // console.log(cathy.introduce());
 
-let doug = new Dog("Doug", 12, "Serving his master", "Eliza")
-console.log(doug.greetMaster());
+// let doug = new Dog("Doug", 12, "Serving his master", "Eliza")
+// console.log(doug.greetMaster());
+// Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+
+// The geese are any strings in the following array, which is pre - populated in your solution:
+
+// ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+// For example, if this array were passed as an argument:
+
+// ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+// Your function would return the following array:
+
+// ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+// The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed.Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
+function gooseFilter(birds) {
+    let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+   return birds.filter(bird => !geese.includes(bird))
+
+    // return an array containing all of the strings in the input array except those that match strings in geese
+};
+
+// gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
+console.log( gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
