@@ -1461,12 +1461,24 @@
 
 // ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
 // The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed.Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
-function gooseFilter(birds) {
-    let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-   return birds.filter(bird => !geese.includes(bird))
+// function gooseFilter(birds) {
+//     let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//    return birds.filter(bird => !geese.includes(bird))
 
-    // return an array containing all of the strings in the input array except those that match strings in geese
-};
+//     // return an array containing all of the strings in the input array except those that match strings in geese
+// };
 
-// gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
-console.log( gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+// // gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
+// console.log( gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+// Take 2 strings s1 and s2 including only letters from a to z.Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+//     Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+function longest(s1, s2) {
+    return [...new Set((s1 + s2).split(''))].sort().join('')
+}
