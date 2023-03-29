@@ -1382,7 +1382,7 @@
 // 	}
 // 	introduce() {
 // 		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
-		
+
 // 	}
 // }
 
@@ -1505,15 +1505,23 @@ function longest(s1, s2) {
 
 //     []-- > []
 //     ["a", "b", "c"]-- > ["1: a", "2: b", "3: c"]
-const number = function (array) {
-    let res = []
-    for (let i = 0; i < array.length; i++) {
-        res.push((i + 1 + ': ') + array[i])
-    }
-    return res;
+// const number = function (array) {
+//     let res = []
+//     for (let i = 0; i < array.length; i++) {
+//         res.push((i + 1 + ': ') + array[i])
+//     }
+//     return res;
+// }
+// let number2 = function (array) {
+//     return array.map(function (line, index) {
+//         return (index + 1) + ": " + line;
+//     });
+// }
+
+function removeSmallest(numbers) {
+return numbers.filter((_,index) => index != numbers.indexOf(Math.min(... numbers)))
+    
 }
-let number2 = function (array) {
-    return array.map(function (line, index) {
-        return (index + 1) + ": " + line;
-    });
-}
+
+// removeSmallest([1, 2, 3, 4, 5])
+console.log(removeSmallest([1, 2, 3, 4, 5]));
