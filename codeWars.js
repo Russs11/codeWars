@@ -1520,7 +1520,7 @@ function longest(s1, s2) {
 
 // function removeSmallest(numbers) {
 // return numbers.filter((_,index) => index != numbers.indexOf(Math.min(... numbers)))
-    
+
 // }
 
 // // removeSmallest([1, 2, 3, 4, 5])
@@ -1536,9 +1536,45 @@ function longest(s1, s2) {
 // Sam Harris => S.H
 
 // patrick feeney => P.F
-function abbrevName(name) {
-   return name.split(' ').map((el, el2) => el[0] ).join('.').toUpperCase()  
+// function abbrevName(name) {
+//    return name.split(' ').map((el, el2) => el[0] ).join('.').toUpperCase()  
+// }
+
+// // abbrevName("Sam Harris")
+// console.log(abbrevName("sam harris"));
+// DESCRIPTION:
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+//     Example
+// "camelCasing"  => "camel Casing"
+// "identifier"   => "identifier"
+// ""             => ""
+function solution(string) {
+    let arr = []
+    let res = string.split('')
+    console.log(res);
+    for (let i = 0; i < res.length; i++){
+        if (res[i] == res[i].toUpperCase()) {
+            arr.push(' ' + res[i])
+        } else {
+            arr.push(res[i])
+        }
+    }
+    return arr.join('');
+}
+function solution(string) {
+    string = string.split('').map(function (el) {
+        if (el === el.toUpperCase()) {
+            el = ' ' + el
+        }
+        return el
+    })
+    return string.join('')
+}
+function solution(string) {
+    return (string.replace(/([A-Z])/g, ' $1'));
+
 }
 
-// abbrevName("Sam Harris")
-console.log(abbrevName("sam harris"));
+
+solution(" ")
