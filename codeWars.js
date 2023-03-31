@@ -1601,21 +1601,38 @@ function longest(s1, s2) {
 //                 * [5] -> min = 5, max = 5
 // Notes
 // You may consider that there will not be any empty arrays / vectors.
-const min = function (list) {
-    return Math.min.apply(null, list);
-}
-const max = function (list) {
-    return Math.max.apply(null, list);
-}
+// const min = function (list) {
+//     return Math.min.apply(null, list);
+// }
+// const max = function (list) {
+//     return Math.max.apply(null, list);
+// }
 
-const min = (list) => Math.min(...list);
-const max = (list) => Math.max(...list);
-const min = function (list) {
-    list.sort((a, b) => (a - b));
-    return list[0];
-}
+// const min = (list) => Math.min(...list);
+// const max = (list) => Math.max(...list);
+// const min = function (list) {
+//     list.sort((a, b) => (a - b));
+//     return list[0];
+// }
 
-const max = function (list) {
-    list.sort((a, b) => (b - a));
-    return list[0];
-}
+// const max = function (list) {
+//     list.sort((a, b) => (b - a));
+//     return list[0];
+// }
+// DESCRIPTION:
+// Instructions
+// Write a function that takes a single string(word) as argument.The function must return an ordered list containing the indexes of all capital letters in the string.
+const capitals = function (word) {
+    // Write your code here
+    let arr = word.split('')
+    console.log(arr);
+    let res = []
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] == arr[i].toUpperCase()) {
+            res.push(i)
+        }
+    }
+   return res;
+};
+
+capitals('CodEWaRs')
