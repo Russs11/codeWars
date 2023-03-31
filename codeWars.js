@@ -1537,7 +1537,7 @@ function longest(s1, s2) {
 
 // patrick feeney => P.F
 // function abbrevName(name) {
-//    return name.split(' ').map((el, el2) => el[0] ).join('.').toUpperCase()  
+//    return name.split(' ').map((el, el2) => el[0] ).join('.').toUpperCase()
 // }
 
 // // abbrevName("Sam Harris")
@@ -1549,32 +1549,37 @@ function longest(s1, s2) {
 // "camelCasing"  => "camel Casing"
 // "identifier"   => "identifier"
 // ""             => ""
-function solution(string) {
-    let arr = []
-    let res = string.split('')
-    console.log(res);
-    for (let i = 0; i < res.length; i++){
-        if (res[i] == res[i].toUpperCase()) {
-            arr.push(' ' + res[i])
-        } else {
-            arr.push(res[i])
-        }
-    }
-    return arr.join('');
-}
-function solution(string) {
-    string = string.split('').map(function (el) {
-        if (el === el.toUpperCase()) {
-            el = ' ' + el
-        }
-        return el
-    })
-    return string.join('')
-}
-function solution(string) {
-    return (string.replace(/([A-Z])/g, ' $1'));
+// function solution(string) {
+//     let arr = []
+//     let res = string.split('')
+//     console.log(res);
+//     for (let i = 0; i < res.length; i++){
+//         if (res[i] == res[i].toUpperCase()) {
+//             arr.push(' ' + res[i])
+//         } else {
+//             arr.push(res[i])
+//         }
+//     }
+//     return arr.join('');
+// }
+// function solution(string) {
+//     string = string.split('').map(function (el) {
+//         if (el === el.toUpperCase()) {
+//             el = ' ' + el
+//         }
+//         return el
+//     })
+//     return string.join('')
+// }
+// function solution(string) {
+//     return (string.replace(/([A-Z])/g, ' $1'));
 
+// }
+
+
+// solution(" ")
+
+function areYouPlayingBanjo(name) {
+    // Implement me
+    return name[0] === 'R' || name[0] === 'r' ? name + ' plays banjo' : name + ' does not play banjo'
 }
-
-
-solution(" ")
