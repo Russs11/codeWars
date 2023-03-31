@@ -1622,17 +1622,38 @@ function longest(s1, s2) {
 // DESCRIPTION:
 // Instructions
 // Write a function that takes a single string(word) as argument.The function must return an ordered list containing the indexes of all capital letters in the string.
-const capitals = function (word) {
-    // Write your code here
-    let arr = word.split('')
-    console.log(arr);
-    let res = []
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] == arr[i].toUpperCase()) {
-            res.push(i)
-        }
-    }
-   return res;
-};
+// const capitals = function (word) {
+//     // Write your code here
+//     let arr = word.split('')
+//     console.log(arr);
+//     let res = []
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] == arr[i].toUpperCase()) {
+//             res.push(i)
+//         }
+//     }
+//    return res;
+// };
 
-capitals('CodEWaRs')
+// capitals('CodEWaRs')
+// DESCRIPTION:
+// Convert number to reversed array of digits
+// Given a random non - negative number, you have to return the digits of this number within an array in reverse order.
+
+//     Example(Input => Output):
+// 35231 => [1, 3, 2, 5, 3]
+// 0 => [0]
+function digitize(n) {
+    //code here
+    let str = n.toString()
+    let arr = []
+    for (let i = str.length - 1; i >= 0; i--){
+        arr.push(+str[i])
+    }
+    return arr;
+}
+function digitize(n) {
+    return String(n).split('').map(Number).reverse()
+}
+digitize(35231)
+console.log(digitize(35231));
