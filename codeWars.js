@@ -1643,17 +1643,53 @@ function longest(s1, s2) {
 //     Example(Input => Output):
 // 35231 => [1, 3, 2, 5, 3]
 // 0 => [0]
-function digitize(n) {
-    //code here
-    let str = n.toString()
-    let arr = []
-    for (let i = str.length - 1; i >= 0; i--){
-        arr.push(+str[i])
+// function digitize(n) {
+//     //code here
+//     let str = n.toString()
+//     let arr = []
+//     for (let i = str.length - 1; i >= 0; i--){
+//         arr.push(+str[i])
+//     }
+//     return arr;
+// }
+// function digitize(n) {
+//     return String(n).split('').map(Number).reverse()
+// }
+// digitize(35231)
+// console.log(digitize(35231));
+// DESCRIPTION:
+// Task
+// Sum all the numbers of a given array(cq.list), except the highest and the lowest element(by value, not by index!).
+
+// The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+// Mind the input validation.
+
+//     Example
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+// Input validation
+// If an empty value(null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
+
+function sumArray(array) {
+    if (array == null) {
+        return 0;
     }
-    return arr;
+    else if (array.length < 2) {
+        return 0;
+    }
+    else {
+        array = array.sort(function (a, b) { return a - b; });
+        let total = 0;
+        for (let i = 1; i < array.length - 1; i++) {
+            total += array[i];
+        }
+        return total;
+    }
+
 }
-function digitize(n) {
-    return String(n).split('').map(Number).reverse()
+function sumArray(array) {
+    return Array.isArray(array) && array.length > 1
+        ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
+        : 0
 }
-digitize(35231)
-console.log(digitize(35231));
