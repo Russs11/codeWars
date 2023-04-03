@@ -1671,25 +1671,50 @@ function longest(s1, s2) {
 // Input validation
 // If an empty value(null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
-function sumArray(array) {
-    if (array == null) {
-        return 0;
-    }
-    else if (array.length < 2) {
-        return 0;
-    }
-    else {
-        array = array.sort(function (a, b) { return a - b; });
-        let total = 0;
-        for (let i = 1; i < array.length - 1; i++) {
-            total += array[i];
-        }
-        return total;
-    }
+// function sumArray(array) {
+//     if (array == null) {
+//         return 0;
+//     }
+//     else if (array.length < 2) {
+//         return 0;
+//     }
+//     else {
+//         array = array.sort(function (a, b) { return a - b; });
+//         let total = 0;
+//         for (let i = 1; i < array.length - 1; i++) {
+//             total += array[i];
+//         }
+//         return total;
+//     }
 
+// }
+// function sumArray(array) {
+//     return Array.isArray(array) && array.length > 1
+//         ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
+//         : 0
+// }
+
+
+const company = {
+    name: 'ООО Агро',
+        employee: [{
+            name: 'Света',
+            getName: function () {
+                return this.name
+            }
+    }
+    ],
+    ceo: {
+        name: 'Вася', 
+        getName: function () {
+            return this.name
+        }
+        
+    },
+    getName: function () {
+        return this.name
+    }
 }
-function sumArray(array) {
-    return Array.isArray(array) && array.length > 1
-        ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
-        : 0
-}
+
+// company.getNames()
+console.log( company.employee.map(employee => employee.getName()));
