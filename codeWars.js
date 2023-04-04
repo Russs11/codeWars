@@ -1479,9 +1479,9 @@
 
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
-function longest(s1, s2) {
-    return [...new Set((s1 + s2).split(''))].sort().join('')
-}
+// function longest(s1, s2) {
+//     return [...new Set((s1 + s2).split(''))].sort().join('')
+// }
 
 // DESCRIPTION:
 // Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
@@ -1695,26 +1695,55 @@ function longest(s1, s2) {
 // }
 
 
-const company = {
-    name: 'ООО Агро',
-        employee: [{
-            name: 'Света',
-            getName: function () {
-                return this.name
-            }
-    }
-    ],
-    ceo: {
-        name: 'Вася', 
-        getName: function () {
-            return this.name
-        }
+// const company = {
+//     name: 'ООО Агро',
+//         employee: [{
+//             name: 'Света',
+//             getName: function () {
+//                 return this.name
+//             }
+//     }
+//     ],
+//     ceo: {
+//         name: 'Вася',
+//         getName: function () {
+//             return this.name
+//         }
         
-    },
-    getName: function () {
-        return this.name
-    }
+//     },
+//     getName: function () {
+//         return this.name
+//     }
+// }
+
+// // company.getNames()
+// console.log( company.employee.map(employee => employee.getName()));
+
+
+
+const userInfo = {
+	balance: 0,
+	operations: 0,
+	increase(sum) {
+		this.balance += sum;
+		this.operations ++
+	}
 }
 
-// company.getNames()
-console.log( company.employee.map(employee => employee.getName()));
+function user() {
+	const userObj = { ...userInfo }
+	return function () {
+		return userObj
+	}
+}
+
+
+const user1 = user()
+user1().increase(100)
+user1().increase(100)
+console.log(user1());
+
+const user2 = user()
+user2().increase(100)
+
+console.log(user2());
