@@ -1808,10 +1808,23 @@
 
 // // positiveSum([-1, 4, -7, 5, 3])
 // console.log( positiveSum([-1, 4, -7, 5, 3]));
-// You will be given an array and a limit value.You must check that all values in the array are below or equal to the limit value.If they are, return true.Else, return false.
+You will be given an array and a limit value.You must check that all values in the array are below or equal to the limit value.If they are, return true.Else, return false.
 
-// You can assume all values in the array are numbers.
-// function smallEnough(a, limit) {
-//     return a.map(item => { item <= limit ? true : false }).includes(false)? false : true
-// }
-// console.log(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120));
+You can assume all values in the array are numbers.
+function smallEnough(a, limit) {
+    returna.map(item => {
+        if (item <= limit) {
+            return true
+        } else {
+            return false
+        }
+    })
+
+    if (res.includes(false)) {
+        return false
+    }
+    else {
+        return true
+    }
+}
+console.log(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120));
