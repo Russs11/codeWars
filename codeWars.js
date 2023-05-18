@@ -1883,3 +1883,24 @@
 // }
 // // minMax([1, 2, 3, 4, 5])
 // console.log( minMax([1, 2, 3, 4, 5]));
+
+// Return the number(count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata(but not y).
+
+// The input string will only consist of lower case letters and / or spaces.
+// function getCount(str) {
+// 	let count = 0
+// 	let vowels = ['a', 'e', 'i', 'o', 'u']
+// 	for (const letter in str) {
+// 		for (const vowel in vowels) {
+			
+// 			if (str[letter] === vowels[vowel]) {
+// 				count++
+// 			}	
+// 			}
+// 	}
+// 	console.log(count);
+// }
+
+// getCount('Letters are big')
