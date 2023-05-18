@@ -27,7 +27,6 @@
 
 // persistence(999);
 
-
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 
 //     Examples
@@ -114,7 +113,6 @@
 //             return 0;
 //     }
 // }
-
 
 // console.log(basicOp('*', 10, 5));
 
@@ -327,9 +325,6 @@
 //     return str.slice(1, -1);
 // }
 // console.log(removeChar("removefirtstandlastword"));
-
-
-
 
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
@@ -549,7 +544,6 @@
 
 // sortByLength(["Beg", "Life", "I", "To"])
 
-
 // Build a function that returns an array of integers from n to 1 where n > 0.
 
 // Example: n = 5 -- > [5, 4, 3, 2, 1]
@@ -666,7 +660,6 @@
 // 	res.push(arr[i])
 // }
 // console.log(res.join(' '));
-
 
 // const duplicateEncode = word => {
 //     let newString = ''
@@ -787,7 +780,6 @@
 // 	}
 // 	}
 
-
 // console.log(gimme([5.9, 10.4, 14.2]));
 
 // Take an array and remove every second element from the array.Always keep the first element and start removing with the next element.
@@ -856,7 +848,6 @@
 // // generateHashtag("")
 // console.log(generateHashtag("#"));
 
-
 // Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
 
 // [Make sure you type the exact thing I wrote or the program may not execute properly]
@@ -881,7 +872,6 @@
 // function sumStr(a, b) {
 // 	return String(Number(a) + Number(b));
 // }
-
 
 // Write simple.camelCase method(camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings.All words must have their first letter capitalized without spaces.
 
@@ -913,7 +903,6 @@
 
 //     }, 0)
 
-
 // 	console.log(arr2, res);
 // }
 // minLen("Hi my Name is Ruslan")
@@ -940,7 +929,6 @@
 //         }
 //     })
 
-
 //     return `There are ${counter} sheeps in total`
 // }
 
@@ -950,8 +938,6 @@
 //     true, false, false, true,
 //     true, true, true, true,
 //     false, false, true, true])
-
-
 
 // const arr = [2, 4, 6, 8]
 // const avg = arr.reduce((acc, num , i) => {
@@ -977,7 +963,6 @@
 // // check([66, 101], 66)
 // // check([66, 101], 66)
 // console.log(check([66, 101], 75))
-
 
 //
 // // Create a function that returns the name of the winner in a fight between two fighters.
@@ -1102,7 +1087,6 @@
 
 // In the same way:
 // longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2)-- > "abigailtheta"
-
 
 // function longestConsec(strarr, k) {
 // 	let longest = "";
@@ -1324,7 +1308,6 @@
 // // generateName()
 // console.log('generateName(): ', generateName());
 
-
 // Fun with ES6 Classes #2 - Animals and Inheritance
 // Overview
 // Preloaded for you in this Kata is a class Animal:
@@ -1371,7 +1354,6 @@
 // 		return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
 // 	}
 // }
-
 
 // class Shark extends Animal {
 // 	constructor(name, age, status) {
@@ -1576,7 +1558,6 @@
 
 // }
 
-
 // solution(" ")
 // DESCRIPTION:
 // Create a function which answers the question "Are you playing banjo?".
@@ -1694,7 +1675,6 @@
 //         : 0
 // }
 
-
 // const company = {
 //     name: 'ООО Агро',
 //         employee: [{
@@ -1719,8 +1699,6 @@
 // // company.getNames()
 // console.log( company.employee.map(employee => employee.getName()));
 
-
-
 // const userInfo = {
 // 	balance: 0,
 // 	operations: 0,
@@ -1736,7 +1714,6 @@
 // 		return userObj
 // 	}
 // }
-
 
 // const user1 = user()
 // user1().increase(100)
@@ -1780,7 +1757,6 @@
 // uniqueInOrder([1, 2, 2, 3, 3]) == [1, 2, 3]
 // var uniqueInOrder = function (iterable) {
 //     let res = []
-
 
 //     for (let i = 0; i < iterable.length; i++) {
 //         if (iterable[i] !== iterable[i-1]){
@@ -1894,7 +1870,7 @@
 // 	let vowels = ['a', 'e', 'i', 'o', 'u']
 // 	for (const letter in str) {
 // 		for (const vowel in vowels) {
-			
+
 // 			if (str[letter] === vowels[vowel]) {
 // 				count++
 // 			}
@@ -1905,14 +1881,52 @@
 
 // getCount('Letters are big')
 
+// function squareArray(arr) {
+// 	let res = arr.map(item => {
+// 		return item**2
+// 	})
+// 	.sort((a,b) => a-b)
+// console.log(res);
+// }
 
-function squareArray(arr) {
-	let res = arr.map(item => {
-		return item**2
-	})
-	.sort((a,b) => a-b)
-console.log(res);
-}
+// squareArray([-4, 1, 0, 3, 10]);
+// DESCRIPTION:
+// The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. The second one contains a student's submitted answers.
 
-squareArray([-4, 1, 0, 3, 10]);
+// The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).
 
+// If the score < 0, return 0.
+
+// For example:
+
+// checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]) → 6
+// checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]) → 7
+// checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
+// checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
+// function checkExam(array1, array2) {
+//   let correct = 0;
+//   let error = 0;
+//   let other = 0;
+
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array1[i] == array2[i]) {
+//       correct++;
+//       console.log(correct);
+//     } else if (array2[i] == "") {
+//       other = 0;
+//     } else {
+//       error++;
+//     }
+//   }
+//   let result = correct * 4 + error * -1 + other;
+//   if (result < 0) {
+//     return 0;
+//   }
+//   return result;
+// }
+
+// // checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]);
+// console.log(
+//   'checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]): ',
+//   checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""])
+// );
