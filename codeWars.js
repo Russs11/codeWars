@@ -1897,10 +1897,22 @@
 			
 // 			if (str[letter] === vowels[vowel]) {
 // 				count++
-// 			}	
+// 			}
 // 			}
 // 	}
 // 	console.log(count);
 // }
 
 // getCount('Letters are big')
+
+
+function squareArray(arr) {
+	let res = arr.map(item => {
+		return item**2
+	})
+	.sort((a,b) => a-b)
+console.log(res);
+}
+
+squareArray([-4, 1, 0, 3, 10]);
+
