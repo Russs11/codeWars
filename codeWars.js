@@ -1952,54 +1952,20 @@
 // 	return nums.length === new Set(nums).size ? false : true
 // };
 
-Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+// Given an array nums containing n distinct numbers in the range[0, n], return the only number in the range that is missing from the array.
 
 
 
-	Example 1:
+// 	Example 1:
 
-Input: nums = [1, 2, 3, 1]
-Output: true
-Example 2:
+// Input: nums = [3, 0, 1]
+// Output: 2
+// Explanation: n = 3 since there are 3 numbers, so all numbers are in the range[0, 3]. 2 is the missing number in the range since it does not appear in nums.
 
-Input: nums = [1, 2, 3, 4]
-Output: false
-Example 3:
-
-Input: nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
-Output: trueGiven an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
-
-
-
-	Example 1:
-
-Input: nums = [1, 2, 3, 1]
-Output: true
-Example 2:
-
-Input: nums = [1, 2, 3, 4]
-Output: false
-Example 3:
-
-Input: nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
-Output: trueGiven an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
-
-
-
-	Example 1:
-
-Input: nums = [1, 2, 3, 1]
-Output: true
-Example 2:
-
-Input: nums = [1, 2, 3, 4]
-Output: false
-Example 3:
-
-Input: nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
-Output: true
-
-
-
-
-
+// const missingNumber = function(nums) {
+//     let n = nums.length
+//     let sum = nums.reduce((acc, el) =>{
+//         return acc += el
+//     },0)
+//     return n * (n+1)/2 - sum
+// };
