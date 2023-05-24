@@ -1969,3 +1969,13 @@
 //     },0)
 //     return n * (n+1)/2 - sum
 // };
+
+function accum(s) {
+    let res = []
+    for(let i = 0; i< s.length; i++){
+        res.push(s[i].toUpperCase() + Array(i + 1).join(s[i].toLowerCase()));
+    }
+	return res.join('-')
+}
+// accum("ZpglnRxqenU")
+console.log('accum("ZpglnRxqenU"): ', accum("ZpglnRxqenU"));
