@@ -1989,3 +1989,23 @@
 // function combat(health, damage) {
 //     return health < damage ? 0 : health - damage
 // }
+
+function order(words){
+    let counter = 0
+    let result = []
+    let arr = words.split(' ')
+    console.log(arr);
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j< arr.length; j++){
+            counter ++
+            console.log( arr[i].includes(arr[j]));
+            if(arr[i].includes(arr[j])){
+                
+            }
+        }
+        // arr[i] - arr[i]
+        console.log(result);
+    }
+}
+
+order("is2 Thi1s T4est 3a")
