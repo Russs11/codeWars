@@ -1999,19 +1999,41 @@
 // "is2 Thi1s T4est 3a"  -- > "Thi1s is2 3a T4est"
 // "4of Fo1r pe6ople g3ood th5e the2"  -- > "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -- > ""
-function order(words) {
-	let arr = words.split(' ')
-	let r = []
+// function order(words) {
+// 	let arr = words.split(' ')
+// 	let r = []
 
-	arr.forEach(word => {
-		let x = word.split('')
-		let num = x.find(el => parseInt(el))
-		r.push([word, parseInt(num)])
-	})
+// 	arr.forEach(word => {
+// 		let x = word.split('')
+// 		let num = x.find(el => parseInt(el))
+// 		r.push([word, parseInt(num)])
+// 	})
 
-	r.sort((a, b) => a[1] - b[1]).map(x => x.splice(1, 1))
-	return r.join(' ')
+// 	r.sort((a, b) => a[1] - b[1]).map(x => x.splice(1, 1))
+// 	return r.join(' ')
+// }
+
+// // order("is2 Thi1s T4est 3a")
+// console.log('order("is2 Thi1s T4est 3a"): ', order("is2 Thi1s T4est 3a"));
+
+
+// This function should test if the factor is a factor of base.
+
+// Return true if it is a factor or false if it is not.
+
+// About factors
+// Factors are numbers you can multiply together to get another number.
+
+// 2 and 3 are factors of 6 because: 2 * 3 = 6
+
+// You can find a factor by dividing numbers.If the remainder is 0 then the number is a factor.
+// You can use the mod operator(%) in most languages to check for a remainder
+// For example 2 is not a factor of 7 because: 7 % 2 = 1
+
+// Note: base is a non - negative number, factor is a positive number.
+
+
+
+function checkForFactor(base, factor) {
+	return base % factor === 0 ? true : false
 }
-
-// order("is2 Thi1s T4est 3a")
-console.log('order("is2 Thi1s T4est 3a"): ', order("is2 Thi1s T4est 3a"));
