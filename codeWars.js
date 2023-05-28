@@ -2057,20 +2057,39 @@
 // 0 <= x <= 4
 // 0 <= y <= 4
 
-function points(games) {
-	let counter = 0
-	for (const nums of games) {
-		if (+nums[0] > +nums[2]) {
-			counter += 3
-		} else if (+nums[0] === +nums[2]) {
-			counter += 1
-		}else if (+nums[0] < +nums[2]) {
-			counter += 0
-		}
+// function points(games) {
+// 	let counter = 0
+// 	for (const nums of games) {
+// 		if (+nums[0] > +nums[2]) {
+// 			counter += 3
+// 		} else if (+nums[0] === +nums[2]) {
+// 			counter += 1
+// 		}else if (+nums[0] < +nums[2]) {
+// 			counter += 0
+// 		}
 		
-	}
-	return counter
-	// return 0
-}
+// 	}
+// 	return counter
+// 	// return 0
+// }
 
-points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
+// points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
+
+// DESCRIPTION:
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+// function doubleChar(str) {
+  
+//   return str.split('').map(item => {
+//     return item + item
+//   })
+//   .join('')
+//   console.log(res);
+// }
+
+// console.log(doubleChar("Adidas"));
