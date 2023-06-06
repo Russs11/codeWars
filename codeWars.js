@@ -2158,43 +2158,66 @@
 // solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
 
 
-function solve(s) {
-    let arr = s.split('')
-    let upperCase = 0
-    let lowerCase = 0
-    let res = []
-    for (const item of arr) {
-        if (item == item.toUpperCase()) {
-            upperCase++
-        }
-        else {
-            lowerCase++
-        }
-        res.push(item)
+// function solve(s) {
+//     let arr = s.split('')
+//     let upperCase = 0
+//     let lowerCase = 0
+//     let res = []
+//     for (const item of arr) {
+//         if (item == item.toUpperCase()) {
+//             upperCase++
+//         }
+//         else {
+//             lowerCase++
+//         }
+//         res.push(item)
 
-    }
-    if (upperCase > lowerCase) {
-        return res.join('').toUpperCase()
-    }
-    if (upperCase === lowerCase) {
-        return res.join('').toLowerCase()
-    }
-    else {
-        return res.join('').toLowerCase()
-    }
-}
-function solve(s) {
-    let lowerC = 0;
-    let upperC = 0;
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] == s[i].toUpperCase()) {
-            upperC++;
-        }
-        else {
-            lowerC++;
-        }
-    }
-    return lowerC >= upperC ? s.toLowerCase() : s.toUpperCase()
-}
+//     }
+//     if (upperCase > lowerCase) {
+//         return res.join('').toUpperCase()
+//     }
+//     if (upperCase === lowerCase) {
+//         return res.join('').toLowerCase()
+//     }
+//     else {
+//         return res.join('').toLowerCase()
+//     }
+// }
+// function solve(s) {
+//     let lowerC = 0;
+//     let upperC = 0;
+//     for (let i = 0; i < s.length; i++) {
+//         if (s[i] == s[i].toUpperCase()) {
+//             upperC++;
+//         }
+//         else {
+//             lowerC++;
+//         }
+//     }
+//     return lowerC >= upperC ? s.toLowerCase() : s.toUpperCase()
+// }
 
-console.log(solve("Code"));
+// console.log(solve("Code"));
+
+// // DESCRIPTION:
+// // You have an award-winning garden and every day the plants need exactly 40mm of water. You created a great piece of JavaScript to calculate the amount of water your plants will need when you have taken into consideration the amount of rain water that is forecast for the day. Your jealous neighbour hacked your computer and filled your code with bugs.
+
+// // Your task is to debug the code before your plants die!
+
+
+// function rainAmount(mm){
+//     if (mm < 40) {
+//          return `You need to give your plant ${40 - mm}mm of water`
+//     }
+//    else if(mm > 40){
+//          return "Your plant has had more than enough water for today!"
+//     }else{
+//      return "Your plant has had more than enough water for today!"
+//     };
+// }
+
+// function rainAmount(mm){
+//     if (mm < 40)
+//       return "You need to give your plant " + (40 - mm) + "mm of water"
+//     return "Your plant has had more than enough water for today!" 
+//   }
