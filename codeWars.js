@@ -2229,9 +2229,9 @@
 // For example, when the input is green, output should be yellow.
 
 
-// function updateLight(current) {
-//     return current === "green" ? "yellow" : current === "yellow" ? "red" : "green"
-// }
+function updateLight(current) {
+    return current === "green" ? "yellow" : current === "yellow" ? "red" : "green"
+}
 
 
-// console.log(updateLight("green"));
+console.log(updateLight("green"));
