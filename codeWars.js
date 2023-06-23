@@ -2310,3 +2310,4 @@ function whatCanIDrink(age) {
     } else {
         alert("Sorry. I can't tell what drink because that age is incorrect!");
     }
+}
