@@ -2281,3 +2281,32 @@ Zero (0) is not checked for any specific sign. Negative zeros make no mathematic
 function makeNegative(num) {
 	return num < 0 ? num : -num;
 }
+
+// DESCRIPTION:
+// Kids drink toddy.
+// Teens drink coke.
+// Young adults drink beer.
+// Adults drink whisky.
+// Make a function that receive age, and return what they drink.
+
+// Rules:
+
+// Children under 14 old.
+// Teens under 18 old.
+// Young under 21 old.
+// Adults have 21 or more.
+
+function whatCanIDrink(age) {
+    if (age <= 0) {
+        alert("Sorry. I can't tell what drink because that age is incorrect!");
+    } else if (age < 14) {
+        alert("Drink Toddy");
+    } else if (age < 18) {
+        alert("Drink Coke");
+    } else if (age < 21) {
+        alert("Drink Beer");
+    } else if (age < 130) {
+        alert("Drink Whisky");
+    } else {
+        alert("Sorry. I can't tell what drink because that age is incorrect!");
+    }
