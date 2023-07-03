@@ -2326,10 +2326,10 @@
 // Your function should only return a number, not the explanation about how you get that number.
 
 
-// function getSum(a, b) {
-//     let sum = 0;
-//     for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
-//       sum += i;
-//     }
-//     return sum;
-//   }
+function getSum(a, b) {
+    let sum = 0;
+    for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
+      sum += i;
+    }
+    return sum;
+  }
