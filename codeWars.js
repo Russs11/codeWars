@@ -2337,11 +2337,24 @@
 // ROT13 is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet. ROT13 is an example of the Caesar cipher.
 
 // Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
-function rot13(message){
-    return message.replace(/[a-z]/giu, (x) => {
-      return String.fromCharCode(
-        x.charCodeAt() + (
-          x.toLowerCase() <= 'm' ? 13: -13
-        ));
-    });
+// function rot13(message){
+//     return message.replace(/[a-z]/giu, (x) => {
+//       return String.fromCharCode(
+//         x.charCodeAt() + (
+//           x.toLowerCase() <= 'm' ? 13: -13
+//         ));
+//     });
+//   }
+// DESCRIPTION:
+// You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+
+// The returned value must be a string, and have "***" between each of its letters.
+
+// You should not remove or add elements from/to the array.
+
+function twoSort(s) {
+  const sorted = s.sort(); // the default sort function works
+    return sorted[0] // take first element
+      .split("") // split string into chars
+      .join("***"); // join chars with ***
   }
