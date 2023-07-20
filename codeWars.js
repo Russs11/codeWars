@@ -2374,19 +2374,23 @@
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
-function accum(s) {
-	// your code
-  const res = []
-  const lowerStr = s.toLowerCase()
+// function accum(s) {
+// 	// your code
+//   const res = []
+//   const lowerStr = s.toLowerCase()
   
-  for(let i = 0; i < lowerStr.length; i++){
-    let str = lowerStr[i].toUpperCase()
-    for(let j = 0; j < i; j++){
-      str += lowerStr[i]
-    }
-    res.push(str)
-  }
-  return res.join('-')
+//   for(let i = 0; i < lowerStr.length; i++){
+//     let str = lowerStr[i].toUpperCase()
+//     for(let j = 0; j < i; j++){
+//       str += lowerStr[i]
+//     }
+//     res.push(str)
+//   }
+//   return res.join('-')
+// 
+
+function accum(s){
+  return [...s.toLowerCase()].reduce((acc, curr, i)=> acc + '-' + curr.toUpperCase() + curr.repeat(i))
 }
 
 // accum("ZpglnRxqenU")/
