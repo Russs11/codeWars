@@ -2394,4 +2394,4 @@ function accum(s){
 }
 
 // accum("ZpglnRxqenU")/
-console.log( accum("abcd"));
+// console.log( accum("abcd"));
