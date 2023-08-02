@@ -14,26 +14,39 @@
 //   }
 
 
-let info: {
-    officeId: number;
-    isOpened: boolean;
-    contacts:{
-        phone:string;
-		email: string;
-        address: {
-            city: string;
-        }
-    }
-} = {
-	"officeId": 45,
-	"isOpened": false,
-	"contacts": {
-		"phone": "+79100000000",
-		"email": "my@email.ru",
-		"address": {
-			"city": "Москва"
-		}
-	}
-}
+// let info: {
+//     officeId: number;
+//     isOpened: boolean;
+//     contacts:{
+//         phone:string;
+// 		email: string;
+//         address: {
+//             city: string;
+//         }
+//     }
+// } = {
+// 	"officeId": 45,
+// 	"isOpened": false,
+// 	"contacts": {
+// 		"phone": "+79100000000",
+// 		"email": "my@email.ru",
+// 		"address": {
+// 			"city": "Москва"
+// 		}
+// 	}
+// }
+// DESCRIPTION:
+// Very simple, given an integer or a floating-point number, find its opposite.
 
-console.log(info);
+// Examples:
+
+// 1: -1
+// 14: -14
+// -34: 34
+// console.log(info);
+
+export class Kata {
+  static opposite(n: number) {
+  return n? -n: n;
+  }
+}
