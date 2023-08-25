@@ -76,76 +76,27 @@
 
 // If you can, try writing it in one line of code.
 
-// export function findDifference(
-//   a: [number, number, number],
-//   b: [number, number, number]
-// ): number {
-//   // your code here
-//   let first = 1;
-//   let second = 1;
-//   for (const i of a) {
-//     first *= i;
-//   }
-//   for (const j of b) {
-//     second *= j;
-//   }
-//   if (first > second) {
-//     return first - second;
-//   } else return second - first;
-// }
-
-// export function findDifference(
-//   a: [number, number, number],
-//   b: [number, number, number]
-// ): number {
-//   return Math.abs(a.reduce((x, y) => x * y) - b.reduce((x, y) => x * y));
-// }
-
-// DESCRIPTION:
-// Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
-
-// For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
-
-// Constraint:
-
-// 1 <= month <= 12
-
-//  function quarterOf(month: number): number {
-//   if (month <= 3) return 1;
-//   if (month <= 6) return 2;
-//   if (month <= 9) return 3;
-//   return 4;
-// }
-// const quarterOf2 = (month: number): number => Math.ceil(month / 3);
-// export function hello(name:string): string {
-//   let res = name.toLowerCase()
-//   res.forEach(item =>{
-//     return item.toLowerCase()
-//   })
-// }
-
-// DESCRIPTION:
-// Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
-
-// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
-
-// Examples:
-
-// * With `name` = "john"  => return "Hello, John!"
-// * With `name` = "aliCE" => return "Hello, Alice!"
-// * With `name` not given 
-//   or `name` = ""        => return "Hello, World!"
-
-export function hello(name = ""): string {
-  if (name === "" || !name) {
-    return "Hello, World!";
+export function findDifference(
+  a: [number, number, number],
+  b: [number, number, number]
+): number {
+  // your code here
+  let first = 1;
+  let second = 1;
+  for (const i of a) {
+    first *= i;
   }
-  let res = name.toLowerCase();
-  let greetName = res[0].toUpperCase() + res.slice(1);
-  return `Hello, ${greetName}!`;
+  for (const j of b) {
+    second *= j;
+  }
+  if (first > second) {
+    return first - second;
+  } else return second - first;
 }
-export function hello(name: string = ""): string {
-  return `Hello, ${
-    !name ? "World" : name[0].toUpperCase() + name.slice(1).toLowerCase()
-  }!`;
+
+export function findDifference(
+  a: [number, number, number],
+  b: [number, number, number]
+): number {
+  return Math.abs(a.reduce((x, y) => x * y) - b.reduce((x, y) => x * y));
 }
