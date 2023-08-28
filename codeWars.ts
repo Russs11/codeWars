@@ -112,16 +112,27 @@
 // * With `name` not given 
 //   or `name` = ""        => return "Hello, World!"
 
-export function hello(name = ""): string {
-  if (name === "" || !name) {
-    return "Hello, World!";
-  }
-  let res = name.toLowerCase();
-  let greetName = res[0].toUpperCase() + res.slice(1);
-  return `Hello, ${greetName}!`;
-}
-export function hello(name: string = ""): string {
-  return `Hello, ${
-    !name ? "World" : name[0].toUpperCase() + name.slice(1).toLowerCase()
-  }!`;
+// export function hello(name = ""): string {
+//   if (name === "" || !name) {
+//     return "Hello, World!";
+//   }
+//   let res = name.toLowerCase();
+//   let greetName = res[0].toUpperCase() + res.slice(1);
+//   return `Hello, ${greetName}!`;
+// }
+// export function hello(name: string = ""): string {
+//   return `Hello, ${
+//     !name ? "World" : name[0].toUpperCase() + name.slice(1).toLowerCase()
+//   }!`;
+// }
+// DESCRIPTION:
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+// Use conditionals to return the proper message:
+
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+export function greet(name: string, owner: string): string {
+  return name === owner ? "Hello boss" : "Hello guest";
 }
