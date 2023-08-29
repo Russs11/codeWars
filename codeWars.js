@@ -94,13 +94,47 @@
 //   return 4;
 // }
 // var quarterOf2 = function (month) { return Math.ceil(month / 3); };
-function hello(name) {
-  if (name === '' || !name) {
-    return 'Hello, World!'
+// function hello(name) {
+//   if (name === '' || !name) {
+//     return 'Hello, World!'
+//   }
+//   let res = name.toLowerCase()
+//   let greetName = res[0].toUpperCase() + res.slice(1)
+//   return `Hello, ${greetName}!`
+// }
+
+// console.log(hello('johN'));
+
+// Создайте калькулятор
+// важность: 5
+// Создайте объект calculator(калькулятор) с тремя методами:
+
+// read()(читать) запрашивает два значения и сохраняет их как свойства объекта.
+//   sum()(суммировать) возвращает сумму сохранённых значений.
+//     mul()(умножить) перемножает сохранённые значения и возвращает результат.
+// let calculator = {
+//   // ... ваш код ...
+// };
+
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mul());
+let calculator = {
+  a: 0, 
+  b: 0,
+
+  read() {
+    calculator.a = prompt('a', 0),
+    calculator.b = prompt('b', 0)  
+  },
+  sum() {
+    return +this.a + +this.b
+  },
+  mul() {
+   return +this.a * +this.b 
   }
-  let res = name.toLowerCase()
-  let greetName = res[0].toUpperCase() + res.slice(1)
-  return `Hello, ${greetName}!`
 }
 
-console.log(hello('johN'));
+calculator.read()
+alert(calculator.sum())
+alert(calculator.mul())
