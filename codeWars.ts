@@ -133,8 +133,28 @@
 // case	return
 // name equals owner	'Hello boss'
 // otherwise	'Hello guest'
-function greet(name: string, owner: string): string {
-  return name === owner ? "Hello boss" : "Hello guest";
+// function greet(name: string, owner: string): string {
+//   return name === owner ? "Hello boss" : "Hello guest";
+// }
+
+// greet("Daniel", "Daniel");
+
+export function sameCase(a : string, b : string): number {
+   if (!/^[A-Za-z]$/.test(a) || !/^[A-Za-z]$/.test(b)) {
+    return -1
+  } else if (
+    (/^[A-Z]$/.test(a) && /^[A-Z]$/.test(b)) ||
+    (/^[a-z]$/.test(a) && /^[a-z]$/.test(b))
+  ) {
+    return 1
+  } else {
+    return 0
+  }
 }
 
-greet("Daniel", "Daniel");
+export function sameCase2(a: string, b: string): number {
+  return !isLetter(a) || !isLetter(b) ? -1 : +(isLow(a) == isLow(b));
+}
+
+const isLetter = (c: string) => /[a-z]/i.test(c);
+const isLow = (c: string) => /[a-z]/.test(c);
