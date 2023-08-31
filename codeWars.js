@@ -119,22 +119,35 @@
 // calculator.read();
 // alert(calculator.sum());
 // alert(calculator.mul());
-let calculator = {
-  a: 0,
-  b: 0,
+// let calculator = {
+//   a: 0,
+//   b: 0,
 
-  read() {
-    this.a = prompt('a', 0),
-    this.b = prompt('b', 0)
-  },
-  sum() {
-    return +this.a + +this.b
-  },
-  mul() {
-    return +this.a * +this.b
-  }
+//   read() {
+//     this.a = prompt('a', 0),
+//     this.b = prompt('b', 0)
+//   },
+//   sum() {
+//     return +this.a + +this.b
+//   },
+//   mul() {
+//     return +this.a * +this.b
+//   }
+// }
+
+// calculator.read()
+// alert(calculator.sum())
+// alert(calculator.mul())
+
+function Accumulator(startingValue) {
+  this.value = startingValue;
+  this.read = function () {
+    this.value += +prompt('Сколько нужно добавить?', 0);
+  };
+
 }
 
-calculator.read()
-alert(calculator.sum())
-alert(calculator.mul())
+let accum = new Accumulator(0)
+accum.read();
+accum.read()
+alert(accum.value)
