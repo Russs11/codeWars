@@ -139,48 +139,15 @@
 // alert(calculator.sum())
 // alert(calculator.mul())
 
-// function Accumulator(startingValue) {
-//   this.value = startingValue;
-//   this.read = function () {
-//     this.value += +prompt('Сколько нужно добавить?', 0);
-//   };
+function Accumulator(startingValue) {
+  this.value = startingValue;
+  this.read = function () {
+    this.value += +prompt('Сколько нужно добавить?', 0);
+  };
 
-// }
-
-// let accum = new Accumulator(0)
-// accum.read();
-// accum.read()
-// alert(accum.value)
-
-
-// class Calc {
-//   constructor(a, b) {
-//     this.a = a;
-//     this.b = b
-//   }
-//   sum() {
-//     this.a = +prompt('enter first value', 0);
-//     this.b = +prompt('enter second value', 0);
-//     alert(this.a + this.b)
-//   }
-// }
-
-// let calc = new Calc()
-// calc.sum();
-
-// alert(calc.res)
-
-function readNumber() {
-  let num;
-
-  do {
-    num = prompt("Введите число", 0);
-  } while (!isFinite(num));
-
-  if (num === null || num === '') return null;
-
-  return +num;
 }
 
-alert(`Число: ${readNumber()}`);
-console.log(readNumber());
+let accum = new Accumulator(0)
+accum.read();
+accum.read()
+alert(accum.value)
