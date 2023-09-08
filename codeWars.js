@@ -153,19 +153,33 @@
 // alert(accum.value)
 
 
-class Calc {
-  constructor(a, b) {
-    this.a = a;
-    this.b = b
-  }
-  sum() {
-    this.a = +prompt('enter first value', 0);
-    this.b = +prompt('enter second value', 0);
-    alert(this.a + this.b)
-  }
-}
+// class Calc {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b
+//   }
+//   sum() {
+//     this.a = +prompt('enter first value', 0);
+//     this.b = +prompt('enter second value', 0);
+//     alert(this.a + this.b)
+//   }
+// }
 
 let calc = new Calc()
 calc.sum();
+function readNumber() {
+  let num;
+
+  do {
+    num = prompt("Введите число", 0);
+  } while (!isFinite(num));
+
+  if (num === null || num === '') return null;
+
+  return +num;
+}
+
+alert(`Число: ${readNumber()}`);
+console.log(readNumber());
 
 // alert(calc.res)
