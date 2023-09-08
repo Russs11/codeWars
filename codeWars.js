@@ -164,6 +164,7 @@
 //     alert(this.a + this.b)
 //   }
 // }
+// alert(calc.res)
 
 let calc = new Calc()
 calc.sum();
@@ -181,5 +182,3 @@ function readNumber() {
 
 alert(`Число: ${readNumber()}`);
 console.log(readNumber());
-
-// alert(calc.res)
