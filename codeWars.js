@@ -166,19 +166,32 @@
 // }
 // alert(calc.res)
 
-let calc = new Calc()
-calc.sum();
-function readNumber() {
-  let num;
+// let calc = new Calc()
+// calc.sum();
+// function readNumber() {
+//   let num;
 
-  do {
-    num = prompt("Введите число", 0);
-  } while (!isFinite(num));
+//   do {
+//     num = prompt("Введите число", 0);
+//   } while (!isFinite(num));
 
-  if (num === null || num === '') return null;
+//   if (num === null || num === '') return null;
 
-  return +num;
+//   return +num;
+// }
+
+// alert(`Число: ${readNumber()}`);
+// console.log(readNumber());
+
+
+//Напишите функцию ucFirst(str), возвращающую строку str с заглавным первым символом. Например:
+
+//ucFirst("вася") == "Вася";
+
+function ucFirst(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
 }
 
-alert(`Число: ${readNumber()}`);
-console.log(readNumber());
+alert(ucFirst("вася")); // Вася
