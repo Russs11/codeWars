@@ -199,11 +199,24 @@
 //Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.
 
 //Функция должна быть нечувствительна к регистру:
-function checkSpam(str) {
-  let str2 = str.toLowerCase()
-  if (str2.includes('viagra') || str2.includes('xxx')) {
-    return true
-  } else {
-    return false
-  }
+// function checkSpam(str) {
+//   let str2 = str.toLowerCase()
+//   if (str2.includes('viagra') || str2.includes('xxx')) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+// Создайте функцию truncate(str, maxlength), которая проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на "…", так, чтобы её длина стала равна maxlength.
+
+// Результатом функции должна быть та же строка, если усечение не требуется, либо, если необходимо, усечённая строка.
+
+//   Например:
+
+function truncate(str, maxlength) {
+  return (str.length > maxlength) ?
+    str.slice(0, maxlength - 1) + '…' : str;
 }
+
+
+
