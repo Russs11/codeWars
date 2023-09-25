@@ -224,28 +224,51 @@
 // Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».
 // Подсчитывает и возвращает сумму элементов массива.
 //   P.S.Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
-function sumInput() {
+// function sumInput() {
 
-  let numbers = [];
+//   let numbers = [];
 
-  while (true) {
+//   while (true) {
 
-    let value = prompt("Введите число", 0);
+//     let value = prompt("Введите число", 0);
 
-    // Прекращаем ввод?
-    if (value === "" || value === null || !isFinite(value)) break;
+//     // Прекращаем ввод?
+//     if (value === "" || value === null || !isFinite(value)) break;
 
-    numbers.push(+value);
+//     numbers.push(+value);
+//   }
+
+//   let sum = 0;
+//   for (let number of numbers) {
+//     sum += number;
+//   }
+//   return sum;
+// }
+
+// alert(sumInput());
+// Check to see if a string has the same amount of 'x's and 'o's.The method must return a boolean and be case insensitive.The string can contain any char.
+
+// Examples input / output:
+
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+function xo(str) {
+
+  let match = str.toLowerCase();
+  let x = 0;
+  let o = 0;
+
+  for (let i = 0; i < match.length; i++) {
+    if (match[i] === "o") {
+      x++;
+    } else if (match[i] === "x") {
+      o++;
+    }
   }
-
-  let sum = 0;
-  for (let number of numbers) {
-    sum += number;
-  }
-  return sum;
+  return x === o;
 }
 
-alert(sumInput());
-
-
-
+console.log(xo("XO"));

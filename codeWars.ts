@@ -154,22 +154,47 @@
 // 'B' and 'g' returns 0
 
 // '0' and '?' returns -1
-export function sameCase(a : string, b : string): number {
-   if (!/^[A-Za-z]$/.test(a) || !/^[A-Za-z]$/.test(b)) {
-    return -1
-  } else if (
-    (/^[A-Z]$/.test(a) && /^[A-Z]$/.test(b)) ||
-    (/^[a-z]$/.test(a) && /^[a-z]$/.test(b))
-  ) {
-    return 1
-  } else {
-    return 0
+// export function sameCase(a : string, b : string): number {
+//    if (!/^[A-Za-z]$/.test(a) || !/^[A-Za-z]$/.test(b)) {
+//     return -1
+//   } else if (
+//     (/^[A-Z]$/.test(a) && /^[A-Z]$/.test(b)) ||
+//     (/^[a-z]$/.test(a) && /^[a-z]$/.test(b))
+//   ) {
+//     return 1
+//   } else {
+//     return 0
+//   }
+// }
+
+// export function sameCase2(a: string, b: string): number {
+//   return !isLetter(a) || !isLetter(b) ? -1 : +(isLow(a) == isLow(b));
+// }
+
+// const isLetter = (c: string) => /[a-z]/i.test(c);
+// const isLow = (c: string) => /[a-z]/.test(c);
+
+// Check to see if a string has the same amount of 'x's and 'o's.The method must return a boolean and be case insensitive.The string can contain any char.
+
+// Examples input / output:
+
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+export function xo(str: string): boolean {
+
+  let match = str.toLowerCase();
+  let x = 0;
+  let o = 0;
+
+  for (let i = 0; i < match.length; i++) {
+    if (match[i] === "o") {
+      x++;
+    } else if (match[i] === "x") {
+      o++;
+    }
   }
+  return x === o;
 }
-
-export function sameCase2(a: string, b: string): number {
-  return !isLetter(a) || !isLetter(b) ? -1 : +(isLow(a) == isLow(b));
-}
-
-const isLetter = (c: string) => /[a-z]/i.test(c);
-const isLow = (c: string) => /[a-z]/.test(c);
