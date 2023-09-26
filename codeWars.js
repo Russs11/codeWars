@@ -255,20 +255,42 @@
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
-function xo(str) {
+// function xo(str) {
 
-  let match = str.toLowerCase();
-  let x = 0;
-  let o = 0;
+//   let match = str.toLowerCase();
+//   let x = 0;
+//   let o = 0;
 
-  for (let i = 0; i < match.length; i++) {
-    if (match[i] === "o") {
-      x++;
-    } else if (match[i] === "x") {
-      o++;
-    }
-  }
-  return x === o;
+//   for (let i = 0; i < match.length; i++) {
+//     if (match[i] === "o") {
+//       x++;
+//     } else if (match[i] === "x") {
+//       o++;
+//     }
+//   }
+//   return x === o;
+// }
+
+// console.log(xo("XO"));
+// Сумма свойств объекта
+// важность: 5
+// Есть объект salaries с произвольным количеством свойств, содержащих заработные платы.
+
+// Напишите функцию sumSalaries(salaries), которая возвращает сумму всех зарплат с помощью метода Object.values и цикла for..of.
+
+// Если объект salaries пуст, то результат должен быть 0.
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+function sumSalaries(salaries){
+let sum = 0
+for(let value of Object.values(salaries)){
+sum += value 
 }
-
-console.log(xo("XO"));
+return sum
+}
+sumSalaries(salaries)
