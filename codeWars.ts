@@ -183,18 +183,37 @@
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
-export function xo(str: string): boolean {
+// export function xo(str: string): boolean {
 
-  let match = str.toLowerCase();
-  let x = 0;
-  let o = 0;
+//   let match = str.toLowerCase();
+//   let x = 0;
+//   let o = 0;
 
-  for (let i = 0; i < match.length; i++) {
-    if (match[i] === "o") {
-      x++;
-    } else if (match[i] === "x") {
-      o++;
-    }
+//   for (let i = 0; i < match.length; i++) {
+//     if (match[i] === "o") {
+//       x++;
+//     } else if (match[i] === "x") {
+//       o++;
+//     }
+//   }
+//   return x === o;
+// }
+// This time no story, no theory. The examples below show you how to write function accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and A..Z
+
+export function accum(s: string): string {
+  let res = "";
+  for (let i = 0; i < s.length; i++) { 
+    res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');   
+
   }
-  return x === o;
-}
+  console.log(res);
+  return res
+} 
+
+accum('abcd')
