@@ -212,7 +212,6 @@ export function accum(s: string): string {
     res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');   
 
   }
-  console.log(res);
   return res
 } 
 
