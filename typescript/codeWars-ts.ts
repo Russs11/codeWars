@@ -206,14 +206,25 @@
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z
 
-export function accum(s: string): string {
-  let res = "";
-  for (let i = 0; i < s.length; i++) { 
-    res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');   
+// export function accum(s: string): string {
+//   let res = "";
+//   for (let i = 0; i < s.length; i++) { 
+//     res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');   
 
-  }
-  return res
-} 
+//   }
+//   return res
+// } 
 
-accum('abcd')
+// accum('abcd')
+
+export function position(alphabet:string):string {
+
+  const position = alphabet.charCodeAt(0) - 96
+
+  return `Position in Alphabet: ${position}`
+
+  
+}
+
+console.log(position("e"));
 
