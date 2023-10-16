@@ -2389,9 +2389,9 @@
 //   return res.join('-')
 // 
 
-// function accum(s){
-//   return [...s.toLowerCase()].reduce((acc, curr, i)=> acc + '-' + curr.toUpperCase() + curr.repeat(i))
-// }
+function accum(s){
+  return [...s.toLowerCase()].reduce((acc, curr, i)=> acc + '-' + curr.toUpperCase() + curr.repeat(i))
+}
 
-// accum("ZpglnRxqenU")/
-// console.log( accum("abcd"));
+accum("ZpglnRxqenU")/
+console.log( accum("abcd"));
