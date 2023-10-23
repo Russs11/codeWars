@@ -2374,19 +2374,19 @@
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
-function accum(s) {
-	// your code
-  const res = []
-  const lowerStr = s.toLowerCase()
+// function accum(s) {
+// 	// your code
+//   const res = []
+//   const lowerStr = s.toLowerCase()
   
-  for(let i = 0; i < lowerStr.length; i++){
-    let str = lowerStr[i].toUpperCase()
-    for(let j = 0; j < i; j++){
-      str += lowerStr[i]
-    }
-    res.push(str)
-  }
-  return res.join('-')
+//   for(let i = 0; i < lowerStr.length; i++){
+//     let str = lowerStr[i].toUpperCase()
+//     for(let j = 0; j < i; j++){
+//       str += lowerStr[i]
+//     }
+//     res.push(str)
+//   }
+//   return res.join('-')
 
 
 // function accum(s){
@@ -2395,3 +2395,20 @@ function accum(s) {
 
 // accum("ZpglnRxqenU")/
 // console.log( accum("abcd"));
+
+// // DESCRIPTION:
+// // You have an award-winning garden and every day the plants need exactly 40mm of water. You created a great piece of JavaScript to calculate the amount of water your plants will need when you have taken into consideration the amount of rain water that is forecast for the day. Your jealous neighbour hacked your computer and filled your code with bugs.
+
+// // Your task is to debug the code before your plants die!
+
+
+function rainAmount(mm){
+    if (mm < 40) {
+         return `You need to give your plant ${40 - mm}mm of water`
+    }
+   else if(mm > 40){
+         return "Your plant has had more than enough water for today!"
+    }else{
+     return "Your plant has had more than enough water for today!"
+    };
+}
