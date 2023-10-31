@@ -2441,13 +2441,46 @@
 // // Your task is to debug the code before your plants die!
 
 
-function rainAmount(mm){
-    if (mm < 40) {
-         return `You need to give your plant ${40 - mm}mm of water`
-    }
-   else if(mm > 40){
-         return "Your plant has had more than enough water for today!"
-    }else{
-     return "Your plant has had more than enough water for today!"
-    };
+// function rainAmount(mm){
+//     if (mm < 40) {
+//          return `You need to give your plant ${40 - mm}mm of water`
+//     }
+//    else if(mm > 40){
+//          return "Your plant has had more than enough water for today!"
+//     }else{
+//      return "Your plant has had more than enough water for today!"
+//     };
+// }
+
+// / DESCRIPTION:
+// Write a function that checks if a given string(case insensitive) is a palindrome.A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar, the date and time 12 / 21 / 33 12: 21, and the sentence: "A man, a plan, a canal – Panama".
+// function isPalindrome(x) {
+// return x.split('').reverse().join('').toLowerCase() === x.toLowerCase() ? true: false
+// }
+// DESCRIPTION:
+// You need to write a function that reverses the words in a given string.A word can also fit an empty string.If this is not clear enough, here are some examples:
+
+// As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+
+//     Example(Input-- > Output)
+
+// "Hello World" -- > "World Hello"
+// "Hi There." -- > "There. Hi"
+// function reverse(string) {
+//     //your code here
+//     return string.split(' ').reverse().join(' ')
+// }
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+// Examples
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -->  "HELLO"
+// don't worry about uppercase vowels
+// y is not considered a vowel for this kata
+function shortcut(string) {
+	return string.split(/[aeiou]/g).join('')
 }
+
+console.log(shortcut('string'));
