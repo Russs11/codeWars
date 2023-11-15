@@ -2500,9 +2500,21 @@
 // input: 2 strings with substrings separated by,
 // 	output: number as a string
 
-function mxdiflg(a1, a2) {
-	if (a1.length === 0 || a2.length === 0) return -1
-	let l1 = a1.map(str => str.length)
-	let l2 = a2.map(str => str.length)
-	return Math.max(Math.max(...l1) - Math.min(...l2), Math.max(...l2) - Math.min(...l1))
+// function mxdiflg(a1, a2) {
+// 	if (a1.length === 0 || a2.length === 0) return -1
+// 	let l1 = a1.map(str => str.length)
+// 	let l2 = a2.map(str => str.length)
+// 	return Math.max(Math.max(...l1) - Math.min(...l2), Math.max(...l2) - Math.min(...l1))
+// }
+
+// Your task is to make a function that can take any non - negative integer as an argument and return it with its digits in descending order.Essentially, rearrange the digits to create the highest possible number.
+
+//     Examples:
+// Input: 42145 Output: 54421
+
+// Input: 145263 Output: 654321
+
+// Input: 123456789 Output: 987654321
+function descendingOrder(n) {
+    return parseInt(String(n).split('').sort().reverse().join(''))
 }
