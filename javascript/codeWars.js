@@ -2515,6 +2515,24 @@
 // Input: 145263 Output: 654321
 
 // Input: 123456789 Output: 987654321
-function descendingOrder(n) {
-    return parseInt(String(n).split('').sort().reverse().join(''))
+// function descendingOrder(n) {
+//     return parseInt(String(n).split('').sort().reverse().join(''))
+// }
+
+// DESCRIPTION:
+// You get an array of numbers, return the sum of all of the positives ones.
+
+//     Example[1, -4, 7, 12] => 1 + 7 + 12 = 20
+
+// Note: if there is nothing to sum, the sum is default to 0.
+function positiveSum(arr) {
+    return arr.reduce((a, b) => {
+        if (b > 0) {
+            return a + b
+        }
+        return a
+    }, 0)
 }
+
+// positiveSum([-1, 4, -7, 5, 3])
+console.log( positiveSum([-1, 4, -7, 5, 3]));
