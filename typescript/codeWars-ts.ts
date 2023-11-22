@@ -1,4 +1,4 @@
-'useStrict'
+"useStrict";
 // DESCRIPTION:
 // Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
 
@@ -109,7 +109,7 @@
 
 // * With `name` = "john"  => return "Hello, John!"
 // * With `name` = "aliCE" => return "Hello, Alice!"
-// * With `name` not given 
+// * With `name` not given
 //   or `name` = ""        => return "Hello, World!"
 
 // export function hello(name = ""): string {
@@ -208,23 +208,42 @@
 
 // export function accum(s: string): string {
 //   let res = "";
-//   for (let i = 0; i < s.length; i++) { 
-//     res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');   
+//   for (let i = 0; i < s.length; i++) {
+//     res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');
 
 //   }
 //   return res
-// } 
+// }
 
 // accum('abcd')
 
-export function position(alphabet:string):string {
+// export function position(alphabet:string):string {
 
-  const position = alphabet.charCodeAt(0) - 96
+//   const position = alphabet.charCodeAt(0) - 96
 
-  return `Position in Alphabet: ${position}`
+//   return `Position in Alphabet: ${position}`
 
-  
+// }
+
+// console.log(position("e"));
+
+//Написать функцию toString которая принимает любой тип и преобразует в строку если это возможно.
+
+export function toString<T>(data: T): string | undefined {
+  if (Array.isArray(data)) {
+    return data.toString();
+  }
+  switch (typeof data) {
+    case "string":
+      return data;
+    case "bigint":
+    case "boolean":
+    case "number":
+    case "symbol":
+      return data.toString();
+    case "object":
+      return JSON.stringify(data);
+    default:
+      return undefined;
+  }
 }
-
-console.log(position("e"));
-
