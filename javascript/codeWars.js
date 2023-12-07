@@ -2525,14 +2525,31 @@
 //     Example[1, -4, 7, 12] => 1 + 7 + 12 = 20
 
 // Note: if there is nothing to sum, the sum is default to 0.
-function positiveSum(arr) {
-    return arr.reduce((a, b) => {
-        if (b > 0) {
-            return a + b
-        }
-        return a
-    }, 0)
-}
+// function positiveSum(arr) {
+//     return arr.reduce((a, b) => {
+//         if (b > 0) {
+//             return a + b
+//         }
+//         return a
+//     }, 0)
+// }
 
-// positiveSum([-1, 4, -7, 5, 3])
-console.log( positiveSum([-1, 4, -7, 5, 3]));
+// // positiveSum([-1, 4, -7, 5, 3])
+// console.log( positiveSum([-1, 4, -7, 5, 3]));
+
+//найти  самое короткое слово в строке
+function minLen(str) {
+	let arr = str.split(' ')
+    console.log(arr);
+    let arr2
+	let res = arr.reduce((acc, word) => {
+		if (acc.length < word.length ) {
+			console.log(acc);
+          arr2.push(acc)
+		}
+
+    }, 0)
+
+	console.log(arr2, res);
+}
+minLen("Hi my Name is Ruslan")
