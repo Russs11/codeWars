@@ -2550,6 +2550,31 @@
 
 //     }, 0)
 
-	console.log(arr2, res);
+// 	console.log(arr2, res);
+// }
+// minLen("Hi my Name is Ruslan")
+
+// DESCRIPTION:
+// We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+// So given a string "super", we should return a list of [2, 4].
+function vowelIndices(word){
+  
+  const vowels = "aeiouyAEIOUY";
+  
+  let arr = [];
+  
+  for (let i = 0; i < word.length; i++) {
+    
+    let char = word[i];
+    
+    if (vowels.includes(char)) {
+    
+      arr.push(i + 1);
+    }
+  }
+  
+  return arr;
 }
-minLen("Hi my Name is Ruslan")
+
+console.log(vowelIndices('YoMama'));
