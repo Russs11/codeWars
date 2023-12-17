@@ -229,21 +229,41 @@
 
 //Написать функцию toString которая принимает любой тип и преобразует в строку если это возможно.
 
-export function toString<T>(data: T): string | undefined {
-  if (Array.isArray(data)) {
-    return data.toString();
+// export function toString<T>(data: T): string | undefined {
+//   if (Array.isArray(data)) {
+//     return data.toString();
+//   }
+//   switch (typeof data) {
+//     case "string":
+//       return data;
+//     case "bigint":
+//     case "boolean":
+//     case "number":
+//     case "symbol":
+//       return data.toString();
+//     case "object":
+//       return JSON.stringify(data);
+//     default:
+//       return undefined;
+//   }
+// }
+export function vowelIndices(word:string):number []{
+  
+  const vowels:string = "aeiouyAEIOUY";
+  
+  let arr:number[] = [];
+  
+  for (let i = 0; i < word.length; i++) {
+    
+    let char = word[i];
+    
+    if (vowels.includes(char)) {
+    
+      arr.push(i + 1);
+    }
   }
-  switch (typeof data) {
-    case "string":
-      return data;
-    case "bigint":
-    case "boolean":
-    case "number":
-    case "symbol":
-      return data.toString();
-    case "object":
-      return JSON.stringify(data);
-    default:
-      return undefined;
-  }
+  
+  return arr;
 }
+
+console.log(vowelIndices('YoMama'));

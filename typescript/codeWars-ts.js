@@ -1,7 +1,7 @@
 "use strict";
-'useStrict';
+"useStrict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.position = void 0;
+exports.vowelIndices = void 0;
 // DESCRIPTION:
 // Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
 // Examples
@@ -91,7 +91,7 @@ exports.position = void 0;
 // Examples:
 // * With `name` = "john"  => return "Hello, John!"
 // * With `name` = "aliCE" => return "Hello, Alice!"
-// * With `name` not given 
+// * With `name` not given
 //   or `name` = ""        => return "Hello, World!"
 // export function hello(name = ""): string {
 //   if (name === "" || !name) {
@@ -172,15 +172,46 @@ exports.position = void 0;
 // The parameter of accum is a string which includes only letters from a..z and A..Z
 // export function accum(s: string): string {
 //   let res = "";
-//   for (let i = 0; i < s.length; i++) { 
-//     res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');   
+//   for (let i = 0; i < s.length; i++) {
+//     res += s[i].toUpperCase() + s[i].toLowerCase().repeat(i) + (i < s.length - 1 ? '-' : '');
 //   }
 //   return res
-// } 
+// }
 // accum('abcd')
-function position(alphabet) {
-    const position = alphabet.charCodeAt(0) - 96;
-    return `Position in Alphabet: ${position}`;
+// export function position(alphabet:string):string {
+//   const position = alphabet.charCodeAt(0) - 96
+//   return `Position in Alphabet: ${position}`
+// }
+// console.log(position("e"));
+//Написать функцию toString которая принимает любой тип и преобразует в строку если это возможно.
+// export function toString<T>(data: T): string | undefined {
+//   if (Array.isArray(data)) {
+//     return data.toString();
+//   }
+//   switch (typeof data) {
+//     case "string":
+//       return data;
+//     case "bigint":
+//     case "boolean":
+//     case "number":
+//     case "symbol":
+//       return data.toString();
+//     case "object":
+//       return JSON.stringify(data);
+//     default:
+//       return undefined;
+//   }
+// }
+function vowelIndices(word) {
+    const vowels = "aeiouyAEIOUY";
+    let arr = [];
+    for (let i = 0; i < word.length; i++) {
+        let char = word[i];
+        if (vowels.includes(char)) {
+            arr.push(i + 1);
+        }
+    }
+    return arr;
 }
-exports.position = position;
-console.log(position("e"));
+exports.vowelIndices = vowelIndices;
+console.log(vowelIndices('YoMama'));
