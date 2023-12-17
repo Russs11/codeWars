@@ -2359,10 +2359,10 @@
 //       .join("***"); // join chars with ***
 //   }
 
-  // DESCRIPTION:
-  // Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
-  
-  // If you need help, here's a reference:
+// DESCRIPTION:
+// Create a function that accepts a list/array and a number n, and returns a list/array of the first n elements from the list/array.
+
+// If you need help, here's a reference:
 //   function take(arr, n) {
 //   return arr.slice(0, n)
 // }
@@ -2378,7 +2378,7 @@
 // 	// your code
 //   const res = []
 //   const lowerStr = s.toLowerCase()
-  
+
 //   for(let i = 0; i < lowerStr.length; i++){
 //     let str = lowerStr[i].toUpperCase()
 //     for(let j = 0; j < i; j++){
@@ -2550,30 +2550,6 @@
 
 //     }, 0)
 
-// 	console.log(arr2, res);
-// }
-// minLen("Hi my Name is Ruslan")
-// DESCRIPTION:
-// We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
-
-// So given a string "super", we should return a list of [2, 4].
-function vowelIndices(word){
-  
-  const vowels = "aeiouyAEIOUY";
-  
-  let arr = [];
-  
-  for (let i = 0; i < word.length; i++) {
-    
-    let char = word[i];
-    
-    if (vowels.includes(char)) {
-    
-      arr.push(i + 1);
-    }
-  }
-  
-  return arr;
+	console.log(arr2, res);
 }
-
-console.log(vowelIndices('YoMama'));
+minLen("Hi my Name is Ruslan")
