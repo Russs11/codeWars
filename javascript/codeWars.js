@@ -2558,23 +2558,46 @@
 // We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
 
 // So given a string "super", we should return a list of [2, 4].
-function vowelIndices(word){
+// function vowelIndices(word){
   
-  const vowels = "aeiouyAEIOUY";
+//   const vowels = "aeiouyAEIOUY";
   
-  let arr = [];
+//   let arr = [];
   
-  for (let i = 0; i < word.length; i++) {
+//   for (let i = 0; i < word.length; i++) {
     
-    let char = word[i];
+//     let char = word[i];
     
-    if (vowels.includes(char)) {
+//     if (vowels.includes(char)) {
     
-      arr.push(i + 1);
-    }
+//       arr.push(i + 1);
+//     }
+//   }
+  
+//   return arr;
+// }
+
+// console.log(vowelIndices('YoMama'));
+
+orderedCount = (text) => {
+  let x = text.split("")
+  let dic = {}
+  let res = []
+  let finalRes = []
+
+  x.forEach((letter, idx) => {
+      !dic[letter] ? dic[letter] = [1, idx] : dic[letter][0] += 1
+  })
+  for (letter in dic){
+      res.push([letter, dic[letter]])
   }
-  
-  return arr;
+  let sortedRes = res.sort(function(a,b){
+      return a[1][1] - b[1][1]
+  })
+  sortedRes.forEach(letter => {
+      finalRes.push([letter[0],letter[1][0]])
+  })
+  return finalRes;
 }
 
-console.log(vowelIndices('YoMama'));
+console.log(orderedCount("abracadabra"));

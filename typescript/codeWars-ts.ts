@@ -247,23 +247,26 @@
 //       return undefined;
 //   }
 // }
-export function vowelIndices(word:string):number []{
+// export function vowelIndices(word:string):number []{
   
-  const vowels:string = "aeiouyAEIOUY";
+//   const vowels:string = "aeiouyAEIOUY";
   
-  let arr:number[] = [];
+//   let arr:number[] = [];
   
-  for (let i = 0; i < word.length; i++) {
+//   for (let i = 0; i < word.length; i++) {
     
-    let char = word[i];
+//     let char = word[i];
     
-    if (vowels.includes(char)) {
+//     if (vowels.includes(char)) {
     
-      arr.push(i + 1);
-    }
-  }
+//       arr.push(i + 1);
+//     }
+//   }
   
-  return arr;
-}
+//   return arr;
+// }
 
-console.log(vowelIndices('YoMama'));
+// console.log(vowelIndices('YoMama'));
+
+
+
