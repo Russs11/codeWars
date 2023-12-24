@@ -2559,21 +2559,21 @@
 
 // So given a string "super", we should return a list of [2, 4].
 // function vowelIndices(word){
-  
+
 //   const vowels = "aeiouyAEIOUY";
-  
+
 //   let arr = [];
-  
+
 //   for (let i = 0; i < word.length; i++) {
-    
+
 //     let char = word[i];
-    
+
 //     if (vowels.includes(char)) {
-    
+
 //       arr.push(i + 1);
 //     }
 //   }
-  
+
 //   return arr;
 // }
 
@@ -2621,14 +2621,72 @@
 // evaporator(10, 10, 5) -> 29
 // Note:
 // Content is in fact not necessary in the body of the function "evaporator", you can use it or not use it, as you wish.Some people might prefer to reason with content, some other with percentages only.It's up to you but you must keep it as a parameter because the tests have it as an argument.
-function evaporator(content, evap_per_day, threshold) {
-    let result = 0;
-    let percentage = 100;
-    while (percentage > threshold) {
-        percentage = percentage - percentage * (evap_per_day / 100);
-        result += 1;
-    }
-    return result;
-}
+// function evaporator(content, evap_per_day, threshold) {
+//     let result = 0;
+//     let percentage = 100;
+//     while (percentage > threshold) {
+//         percentage = percentage - percentage * (evap_per_day / 100);
+//         result += 1;
+//     }
+//     return result;
+// }
 
-console.log((evaporator(10, 10, 5), 29));
+// console.log((evaporator(10, 10, 5), 29));
+// 5 kyu
+// String incrementer
+// 272649790% of 4,29719,457 of 42,719parceval
+// JavaScript
+// TRAIN AGAINNEXT KATA
+// Details
+// Solutions
+// Forks (41)
+// Discourse (742)
+// Translations
+// Fork|Collect|
+// DESCRIPTION:
+// Your job is to write a function which increments a string, to create a new string.
+
+// If the string already ends with a number, the number should be incremented by 1.
+// If the string does not end with a number. the number 1 should be appended to the new string.
+// Examples:
+
+// foo -> foo1
+
+// foobar23 -> foobar24
+
+// foo0042 -> foo0043
+
+// foo9 -> foo10
+
+// foo099 -> foo100
+
+// Attention: If the number has leading zeros the amount of digits should be considered.
+function incrementString(string) {
+    const getIndexFirstDigit = string => {
+        for (let i = 0; i < string.length; i++) {
+            const currentCharacter = string[i]
+            const isInteger = Number(currentCharacter) >= 0
+
+            if (!isInteger) return i
+        }
+    }
+
+    const reverseString = string.split('').reverse().join('')
+
+    const indexFirstDigit = getIndexFirstDigit(reverseString)
+
+    const stringPart = string.slice(0, -indexFirstDigit)
+    const stringNumericPart = string.slice(string.length - indexFirstDigit)
+    const realNumericPart = Number(stringNumericPart) + 1
+
+    if (stringNumericPart.length === 0) return `${string}1`
+
+    const numberZerosLeft =
+        stringNumericPart.length - String(realNumericPart).length
+
+    let result = stringPart
+    if (numberZerosLeft > 0) result += '0'.repeat(numberZerosLeft)
+    result += realNumericPart
+
+    return result
+}
