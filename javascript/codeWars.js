@@ -2661,32 +2661,48 @@
 // foo099 -> foo100
 
 // Attention: If the number has leading zeros the amount of digits should be considered.
-function incrementString(string) {
-    const getIndexFirstDigit = string => {
-        for (let i = 0; i < string.length; i++) {
-            const currentCharacter = string[i]
-            const isInteger = Number(currentCharacter) >= 0
+// function incrementString(string) {
+//     const getIndexFirstDigit = string => {
+//         for (let i = 0; i < string.length; i++) {
+//             const currentCharacter = string[i]
+//             const isInteger = Number(currentCharacter) >= 0
 
-            if (!isInteger) return i
-        }
-    }
+//             if (!isInteger) return i
+//         }
+//     }
 
-    const reverseString = string.split('').reverse().join('')
+//     const reverseString = string.split('').reverse().join('')
 
-    const indexFirstDigit = getIndexFirstDigit(reverseString)
+//     const indexFirstDigit = getIndexFirstDigit(reverseString)
 
-    const stringPart = string.slice(0, -indexFirstDigit)
-    const stringNumericPart = string.slice(string.length - indexFirstDigit)
-    const realNumericPart = Number(stringNumericPart) + 1
+//     const stringPart = string.slice(0, -indexFirstDigit)
+//     const stringNumericPart = string.slice(string.length - indexFirstDigit)
+//     const realNumericPart = Number(stringNumericPart) + 1
 
-    if (stringNumericPart.length === 0) return `${string}1`
+//     if (stringNumericPart.length === 0) return `${string}1`
 
-    const numberZerosLeft =
-        stringNumericPart.length - String(realNumericPart).length
+//     const numberZerosLeft =
+//         stringNumericPart.length - String(realNumericPart).length
 
-    let result = stringPart
-    if (numberZerosLeft > 0) result += '0'.repeat(numberZerosLeft)
-    result += realNumericPart
+//     let result = stringPart
+//     if (numberZerosLeft > 0) result += '0'.repeat(numberZerosLeft)
+//     result += realNumericPart
 
-    return result
+//     return result
+// }
+// 8 kyu
+// Grasshopper - Function syntax debugging
+// 1214790 % of 2, 94414, 986 of 26, 655danleavitt0
+// JavaScript
+// TRAIN AGAINNEXT KATA
+// Details
+// Solutions
+// Discourse(38)
+// Translations
+// Fork | Collect |
+//     How satisfied are you with this kata ? VERYSOMEWHATNONE
+// Grasshopper - Function syntax debugging
+// A student was working on a function and made some syntax mistakes while coding.Help them find their mistakes and fix them.
+function main(verb, noun) {
+    return verb + noun
 }
